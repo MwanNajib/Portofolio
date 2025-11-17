@@ -4,9 +4,10 @@
     class="min-h-screen flex items-center bg-gradient-to-br from-gray-100 to-gray-200"
   >
     <div class="container mx-auto px-6 text-center" data-aos="fade-up">
-      <h1 class="text-5xl md:text-7xl font-extrabold text-gray-800 mb-4 h-20">
+      <h1 class="text-5xl md:text-7xl font-extrabold text-gray-800 mb-4 h-40">
         {{ typedText }}<span class="cursor-blink">|</span>
       </h1>
+
       <p class="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
         Fresh Graduate Computer Engineering Technology Student | Web Developer
         Enthusiast | Engineering & Maintenance Enthusiast.
