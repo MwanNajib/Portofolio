@@ -9,21 +9,22 @@
       </h1>
 
       <p class="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
-        Fresh Graduate Computer Engineering Technology Student | Web Developer
-        Enthusiast | Engineering & Maintenance Enthusiast.
+        {{ $t("hero.subtitle") }}
       </p>
-      <a
-        href="#portfolio"
-        class="bg-teal-600 text-white font-bold px-8 py-4 rounded-full hover:bg-teal-700 transition-all duration-300 shadow-lg transform hover:scale-105"
+      <NuxtLink
+        :to="localePath('/portfolio')"
+        class="bg-teal-600 text-white font-bold inline-block px-8 py-4 rounded-full hover:bg-teal-700 transition-all duration-300 shadow-lg transform hover:scale-105"
       >
-        Portofolio
-      </a>
+        {{ $t("hero.button") }}
+      </NuxtLink>
     </div>
   </section>
 </template>
 
 <script setup>
 import { ref, onMounted, onUnmounted } from "vue";
+
+const localePath = useLocalePath();
 
 const typedText = ref("");
 const fullText = "Muhammad Wisnu Ainun Najib";

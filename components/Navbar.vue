@@ -1,117 +1,258 @@
 <template>
   <nav
-    class="bg-white/80 backdrop-blur-md shadow-md fixed top-0 left-0 w-full z-50 transition-all duration-300"
+    class="bg-white dark:bg-[#1d2226] sticky top-0 left-0 w-full z-50 border-b border-gray-200 dark:border-gray-700 transition-colors"
   >
-    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-      <NuxtLink to="/" class="flex items-center space-x-3">
-        <img
-          src="/image/pnav2.jpg"
-          alt="Foto Profil"
-          class="h-10 w-10 rounded-full object-cover"
-        />
-        <span class="text-2xl font-bold text-gray-800"> Portofolio </span>
-      </NuxtLink>
-      <div class="hidden md:flex space-x-8 text-gray-700 font-medium">
-        <a href="#hero" class="hover:text-teal-600 transition">HOME</a>
-        <a href="#about" class="hover:text-teal-600 transition">ABOUT</a>
-        <a href="#internship" class="hover:text-teal-600 transition"
-          >INTERNSHIP</a
+    <div
+      class="max-w-[1128px] mx-auto px-4 lg:px-0 flex justify-between items-center h-[52px]"
+    >
+      <!-- Left side: Logo & Search -->
+      <div class="flex items-center gap-2">
+        <NuxtLink
+          :to="localePath('/')"
+          class="text-white bg-[#0a66c2] text-xl font-bold px-1.5 py-0.5 rounded-[3px] leading-none shrink-0"
+          style="font-family: Arial, sans-serif"
         >
-        <a href="#portfolio" class="hover:text-teal-600 transition">PROJECTS</a>
-        <a href="#contact" class="hover:text-teal-600 transition">CONTACT</a>
-      </div>
-
-      <button
-        @click="toggleMenu"
-        class="md:hidden text-gray-700 focus:outline-none"
-      >
-        <!-- Icon for hamburger menu -->
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="h-6 w-6"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            v-if="!isOpen"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M4 6h16M4 12h16m-7 6h7"
+          in
+        </NuxtLink>
+        <div class="relative hidden sm:block">
+          <div
+            class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+          >
+            <Search class="text-gray-500 w-[14px] h-[14px]" />
+          </div>
+          <input
+            type="text"
+            class="bg-[#eef3f8] dark:bg-[#38434f] dark:text-gray-200 text-gray-900 text-[14px] rounded-[4px] focus:ring-1 focus:ring-gray-400 focus:outline-none focus:bg-white focus:border-gray-400 block w-[280px] pl-10 h-[34px] transition-colors"
+            placeholder="Search"
           />
-          <path
-            v-else
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M6 18L18 6M6 6l12 12"
-          />
-        </svg>
-      </button>
-    </div>
-
-    <!-- Mobile Menu -->
-    <transition name="slide-fade">
-      <div v-if="isOpen" class="md:hidden bg-white shadow-lg">
-        <div
-          class="flex flex-col items-center space-y-4 py-4 text-gray-700 font-medium"
-        >
-          <a
-            href="#hero"
-            @click="toggleMenu"
-            class="hover:text-teal-600 transition"
-            >HOME</a
-          >
-          <a
-            href="#about"
-            @click="toggleMenu"
-            class="hover:text-teal-600 transition"
-            >ABOUT</a
-          >
-          <a
-            href="#internship"
-            @click="toggleMenu"
-            class="hover:text-teal-600 transition"
-            >INTERNSHIP</a
-          >
-          <a
-            href="#portfolio"
-            @click="toggleMenu"
-            class="hover:text-teal-600 transition"
-            >PROJECTS</a
-          >
-          <a
-            href="#contact"
-            @click="toggleMenu"
-            class="hover:text-teal-600 transition"
-            >CONTACT</a
-          >
         </div>
       </div>
-    </transition>
+
+      <!-- Right side: Menu Icons -->
+      <div
+        class="flex space-x-1 sm:space-x-2 md:space-x-4 h-full items-center text-gray-500 dark:text-gray-400"
+      >
+        <NuxtLink
+          :to="localePath('/')"
+          active-class="text-gray-900 border-b-[2px] border-gray-900 dark:text-white dark:border-white"
+          class="flex flex-col items-center justify-center cursor-pointer hover:text-gray-900 dark:hover:text-white transition-colors w-[50px] md:w-[70px] h-full"
+        >
+          <Home class="w-[20px] h-[20px] mb-[2px]" />
+          <span
+            class="text-[10px] md:text-[12px] hidden sm:block mt-[-2px] uppercase"
+            >{{ $t("nav.home") || "Beranda" }}</span
+          >
+        </NuxtLink>
+        <NuxtLink
+          :to="localePath('/about')"
+          active-class="text-gray-900 border-b-[2px] border-gray-900 dark:text-white dark:border-white"
+          class="flex flex-col items-center justify-center cursor-pointer hover:text-gray-900 dark:hover:text-white transition-colors w-[50px] md:w-[70px] h-full"
+        >
+          <User class="w-[20px] h-[20px] mb-[2px]" />
+          <span
+            class="text-[10px] md:text-[12px] hidden sm:block mt-[-2px] uppercase"
+            >{{ $t("nav.about") || "Tentang" }}</span
+          >
+        </NuxtLink>
+        <NuxtLink
+          :to="localePath('/internship')"
+          active-class="text-gray-900 border-b-[2px] border-gray-900 dark:text-white dark:border-white"
+          class="flex flex-col items-center justify-center cursor-pointer hover:text-gray-900 dark:hover:text-white transition-colors w-[50px] md:w-[70px] h-full"
+        >
+          <Building class="w-[20px] h-[20px] mb-[2px]" />
+          <span
+            class="text-[10px] md:text-[12px] hidden sm:block mt-[-2px] uppercase"
+            >{{ $t("nav.internship") || "Magang" }}</span
+          >
+        </NuxtLink>
+        <NuxtLink
+          :to="localePath('/portfolio')"
+          active-class="text-gray-900 border-b-[2px] border-gray-900 dark:text-white dark:border-white"
+          class="flex flex-col items-center justify-center cursor-pointer hover:text-gray-900 dark:hover:text-white transition-colors w-[50px] md:w-[70px] h-full relative"
+        >
+          <Briefcase class="w-[20px] h-[20px] mb-[2px]" />
+          <span
+            class="text-[10px] md:text-[12px] hidden sm:block mt-[-2px] uppercase"
+            >{{ $t("nav.projects") || "Proyek" }}</span
+          >
+        </NuxtLink>
+        <NuxtLink
+          :to="localePath('/contact')"
+          active-class="text-gray-900 border-b-[2px] border-gray-900 dark:text-white dark:border-white"
+          class="flex flex-col items-center justify-center cursor-pointer hover:text-gray-900 dark:hover:text-white transition-colors w-[50px] md:w-[70px] h-full border-r border-gray-200 dark:border-gray-700 pr-2 md:pr-4"
+        >
+          <MessageSquare class="w-[20px] h-[20px] mb-[2px]" />
+          <span
+            class="text-[10px] md:text-[12px] hidden sm:block mt-[-2px] uppercase"
+            >{{ $t("nav.contact") || "Kontak" }}</span
+          >
+        </NuxtLink>
+
+        <!-- Profil "Saya" (Profile Dropdown) -->
+        <div class="relative flex items-center h-full">
+          <div
+            class="flex flex-col items-center justify-center pl-2 md:pl-4 cursor-pointer hover:text-gray-900 dark:hover:text-white transition-colors min-w-[50px] md:min-w-[70px] h-[52px]"
+            @click="isProfileMenuOpen = !isProfileMenuOpen"
+          >
+            <img
+              src="/image/pnav2.jpg"
+              alt="Profile"
+              class="w-[24px] h-[24px] rounded-full object-cover mb-[2px] transition-transform"
+              :class="{ 'scale-110': isProfileMenuOpen }"
+            />
+            <div
+              class="text-[10px] md:text-[12px] hidden sm:flex items-center gap-1 mt-[-2px] whitespace-nowrap"
+            >
+              Saya
+              <ChevronDown
+                class="w-3 h-3 text-gray-500 transition-transform"
+                :class="{ 'rotate-180': isProfileMenuOpen }"
+              />
+            </div>
+          </div>
+
+          <!-- Full Screen Invisible Overlay to capture outside clicks -->
+          <div
+            v-if="isProfileMenuOpen"
+            class="fixed inset-0 z-40"
+            @click="isProfileMenuOpen = false"
+          ></div>
+
+          <!-- Dropdown Menu -->
+          <div
+            v-if="isProfileMenuOpen"
+            class="absolute top-[52px] right-0 translate-y-1 w-[260px] bg-white dark:bg-[#1d2226] border border-gray-200 dark:border-gray-700 rounded-lg shadow-xl py-2 flex flex-col text-left z-50 cursor-default animate-in fade-in zoom-in-95 duration-200"
+          >
+            <div
+              class="px-4 py-3 border-b border-gray-200 dark:border-gray-700 font-bold text-gray-900 dark:text-white text-[15px]"
+            >
+              Pengaturan & Privasi
+            </div>
+
+            <!-- Language Selection -->
+            <div
+              class="px-4 py-3 flex justify-between items-center border-b border-gray-100 dark:border-gray-800"
+            >
+              <span
+                class="text-[14px] font-medium text-gray-700 dark:text-gray-300"
+              >
+                Bahasa / Language
+              </span>
+              <div
+                class="flex gap-1 text-[12px] font-medium text-gray-500 bg-gray-100 dark:bg-gray-800 px-2 py-1.5 rounded-md"
+              >
+                <button
+                  @click="changeLocale('id')"
+                  :class="{
+                    'text-[#0a66c2] font-bold dark:text-blue-400 bg-white dark:bg-gray-700 shadow-sm rounded-sm':
+                      locale === 'id',
+                  }"
+                  class="cursor-pointer hover:text-gray-900 dark:hover:text-white px-2 py-0.5 transition-colors"
+                >
+                  ID
+                </button>
+                <button
+                  @click="changeLocale('en')"
+                  :class="{
+                    'text-[#0a66c2] font-bold dark:text-blue-400 bg-white dark:bg-gray-700 shadow-sm rounded-sm':
+                      locale === 'en',
+                  }"
+                  class="cursor-pointer hover:text-gray-900 dark:hover:text-white px-2 py-0.5 transition-colors"
+                >
+                  EN
+                </button>
+              </div>
+            </div>
+
+            <!-- Dark Mode Toggle -->
+            <div
+              class="px-4 py-3 flex justify-between items-center hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer transition select-none"
+              @click="toggleDarkMode"
+            >
+              <div class="flex items-center gap-2">
+                <Moon v-if="isDark" class="w-[18px] h-[18px] text-gray-300" />
+                <Sun
+                  v-else
+                  class="w-[18px] h-[18px] text-gray-600 dark:text-gray-300"
+                />
+                <span
+                  class="text-[14px] font-medium text-gray-700 dark:text-gray-300"
+                >
+                  Mode Gelap
+                </span>
+              </div>
+              <!-- Toggle switch UI -->
+              <div
+                class="w-10 h-5 rounded-full flex items-center p-1 transition-colors duration-300 shadow-inner border border-gray-200 dark:border-gray-600"
+                :class="
+                  isDark ? 'bg-green-600 border-green-600' : 'bg-gray-200'
+                "
+              >
+                <div
+                  class="w-[14px] h-[14px] bg-white rounded-full shadow-md transform transition-transform duration-300"
+                  :class="isDark ? 'translate-x-5' : 'translate-x-0'"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </nav>
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
+import { useI18n, useLocalePath } from "#imports";
+import { useRouter } from "vue-router";
+import {
+  Search,
+  Home,
+  User,
+  Building,
+  Briefcase,
+  MessageSquare,
+  ChevronDown,
+  Sun,
+  Moon,
+} from "lucide-vue-next";
 
-const isOpen = ref(false);
+// i18n
+const { locale, setLocale } = useI18n();
+const localePath = useLocalePath();
+const router = useRouter();
 
-const toggleMenu = () => {
-  isOpen.value = !isOpen.value;
+const isProfileMenuOpen = ref(false);
+const isDark = ref(false);
+
+const toggleDarkMode = () => {
+  isDark.value = !isDark.value;
+  if (isDark.value) {
+    document.documentElement.classList.add("dark");
+    localStorage.setItem("theme-mode", "dark");
+  } else {
+    document.documentElement.classList.remove("dark");
+    localStorage.setItem("theme-mode", "light");
+  }
 };
+
+const changeLocale = async (newLocale) => {
+  await setLocale(newLocale);
+  isProfileMenuOpen.value = false;
+};
+
+onMounted(() => {
+  // Set initial theme
+  const savedTheme = localStorage.getItem("theme-mode");
+  if (
+    savedTheme === "dark" ||
+    (!savedTheme && window.matchMedia("(prefers-color-scheme: dark)").matches)
+  ) {
+    isDark.value = true;
+    document.documentElement.classList.add("dark");
+  } else {
+    isDark.value = false;
+    document.documentElement.classList.remove("dark");
+  }
+});
 </script>
-
-<style scoped>
-.slide-fade-enter-active,
-.slide-fade-leave-active {
-  transition: all 0.3s ease-out;
-}
-
-.slide-fade-enter-from,
-.slide-fade-leave-to {
-  transform: translateY(-20px);
-  opacity: 0;
-}
-</style>

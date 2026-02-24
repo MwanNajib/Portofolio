@@ -5,7 +5,7 @@
         class="text-4xl font-bold text-center text-gray-800 mb-12"
         data-aos="fade-up"
       >
-        WORK EXPERIENCE
+        {{ $t("internship.title") }}
       </h2>
       <div class="relative max-w-5xl mx-auto">
         <!-- Vertical Line -->
@@ -30,27 +30,18 @@
                 class="bg-gray-100 rounded-lg shadow-xl w-auto md:w-5/12 ml-10 md:ml-0 px-6 py-4"
               >
                 <h3 class="mb-3 font-bold text-gray-800 text-xl">
-                  AirNav Indoensia
+                  {{ $t("internship.job1.company") }}
                 </h3>
                 <p class="text-sm leading-snug tracking-wide text-gray-600">
-                  <strong>Posisi:</strong> IT development<br />
-                  <strong>Durasi:</strong> Okt 2025 - Present
+                  <strong>{{ $t("internship.position") }}</strong>
+                  {{ $t("internship.job1.position") }}<br />
+                  <strong>{{ $t("internship.duration") }}</strong>
+                  {{ $t("internship.job1.duration") }}
                 </p>
                 <ul class="list-disc list-inside mt-2 text-sm text-gray-500">
-                  <li>
-                    Develop authentication flow from UI to Back-End API
-                    integration, including error handling.
-                  </li>
-                  <li>
-                    Building reusable UI components and implementing fully
-                    responsive design for event management application
-                    (Navevent).
-                  </li>
-                  <li>
-                    Perform post-deployment debugging and maintenance, including
-                    fixing data synchronization (state management) bugs between
-                    views and the database.
-                  </li>
+                  <li>{{ $t("internship.job1.desc1") }}</li>
+                  <li>{{ $t("internship.job1.desc2") }}</li>
+                  <li>{{ $t("internship.job1.desc3") }}</li>
                 </ul>
               </div>
             </div>
@@ -69,37 +60,19 @@
                 class="bg-gray-100 rounded-lg shadow-xl w-auto md:w-5/12 ml-10 md:ml-0 px-6 py-4"
               >
                 <h3 class="mb-3 font-bold text-gray-800 text-xl">
-                  PT. Jasamarga Tollroad Operator Semarang Demak Section
+                  {{ $t("internship.job2.company") }}
                 </h3>
                 <p class="text-sm leading-snug tracking-wide text-gray-600">
-                  <strong>Posisi:</strong> IT Support<br />
-                  <strong>Durasi:</strong> Sept 2024 – Jan 2025
+                  <strong>{{ $t("internship.position") }}</strong>
+                  {{ $t("internship.job2.position") }}<br />
+                  <strong>{{ $t("internship.duration") }}</strong>
+                  {{ $t("internship.job2.duration") }}
                 </p>
                 <ul class="list-disc list-inside mt-2 text-sm text-gray-500">
-                  <li>
-                    Recorded monthly AVC reports as part of operational
-                    monitoring, documented and reported daily traffic flow data
-                    at entrance and exit toll gates, including matrices and
-                    tariffs.
-                  </li>
-                  <li>
-                    Uploaded vehicle incident reports via the Jasa Marga
-                    Tollroad Operator website, created handover letters for
-                    patrol and ambulance equipment, and designed posters,
-                    advertisements, road signs, and highway warnings.
-                  </li>
-                  <li>
-                    Monitored system screens regularly to ensure vehicle
-                    classification accuracy, repaired unstable automatic
-                    barriers, fixed issues with transaction printers, and
-                    checked EDC machines.
-                  </li>
-                  <li>
-                    Performed maintenance and inspections of toll gate
-                    generators, monitored monthly server room temperatures for
-                    system maintenance, and conducted audits to ensure the
-                    readiness of all devices, facilities, and infrastructure.
-                  </li>
+                  <li>{{ $t("internship.job2.desc1") }}</li>
+                  <li>{{ $t("internship.job2.desc2") }}</li>
+                  <li>{{ $t("internship.job2.desc3") }}</li>
+                  <li>{{ $t("internship.job2.desc4") }}</li>
                 </ul>
               </div>
             </div>

@@ -2,7 +2,7 @@
   <section id="contact" class="py-20 bg-gray-50">
     <div class="container mx-auto px-6">
       <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">
-        Contact Me
+        {{ $t("contact.title") }}
       </h2>
       <div class="max-w-3xl mx-auto bg-white p-8 rounded-lg shadow-md">
         <form action="https://formspree.io/f/xqawaldn" method="POST">
@@ -11,7 +11,7 @@
               <label
                 for="name"
                 class="block mb-2 text-lg font-medium text-gray-700"
-                >Name</label
+                >{{ $t("contact.name") }}</label
               >
               <input
                 type="text"
@@ -19,14 +19,14 @@
                 name="name"
                 required
                 class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500 transition"
-                placeholder="Nama Anda"
+                :placeholder="$t('contact.namePlaceholder')"
               />
             </div>
             <div class="flex-1">
               <label
                 for="email"
                 class="block mb-2 text-lg font-medium text-gray-700"
-                >Email</label
+                >{{ $t("contact.email") }}</label
               >
               <input
                 type="email"
@@ -34,7 +34,7 @@
                 name="email"
                 required
                 class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500 transition"
-                placeholder="Email Anda"
+                :placeholder="$t('contact.emailPlaceholder')"
               />
             </div>
           </div>
@@ -42,7 +42,7 @@
             <label
               for="message"
               class="block mb-2 text-lg font-medium text-gray-700"
-              >Message</label
+              >{{ $t("contact.message") }}</label
             >
             <textarea
               id="message"
@@ -50,7 +50,7 @@
               rows="5"
               required
               class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-500 transition"
-              placeholder="Pesan Anda..."
+              :placeholder="$t('contact.messagePlaceholder')"
             ></textarea>
           </div>
           <div class="text-center">
@@ -58,7 +58,7 @@
               type="submit"
               class="bg-teal-600 text-white font-bold px-8 py-3 rounded-full hover:bg-teal-700 transition-all duration-300 shadow-lg transform hover:scale-105"
             >
-              Send Message
+              {{ $t("contact.btn") }}
             </button>
           </div>
         </form>

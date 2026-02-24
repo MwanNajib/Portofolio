@@ -5,7 +5,7 @@
         class="text-4xl font-bold text-center text-gray-800 mb-12"
         data-aos="fade-up"
       >
-        Portofolio
+        {{ $t("portfolio.title") }}
       </h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
         <!-- Project Card 1 -->
@@ -21,16 +21,16 @@
           />
           <div class="p-6">
             <h3 class="text-2xl font-bold mb-2 text-gray-800">
-              Project NavEvent
+              {{ $t("portfolio.proj1.title") }}
             </h3>
             <p class="text-gray-600 mb-4">
-              Web platform for event discovery, registration and management.
+              {{ $t("portfolio.proj1.desc") }}
             </p>
             <a
               href="https://github.com/MwanNajib"
               target="_blank"
               class="text-red-600 font-semibold hover:underline"
-              >Lihat Detail &rarr;</a
+              >{{ $t("portfolio.detail") }}</a
             >
           </div>
         </div>
@@ -48,17 +48,16 @@
           />
           <div class="p-6">
             <h3 class="text-2xl font-bold mb-2 text-gray-800">
-              Project Website Makroni Kapok-Kapok
+              {{ $t("portfolio.proj2.title") }}
             </h3>
             <p class="text-gray-600 mb-4">
-              Company profile and e-commerce website for the 'Makroni
-              Kapok-Kapok' brand.
+              {{ $t("portfolio.proj2.desc") }}
             </p>
             <a
               href="https://github.com/MwanNajib"
               target="_blank"
               class="text-red-600 font-semibold hover:underline"
-              >Lihat Detail &rarr;</a
+              >{{ $t("portfolio.detail") }}</a
             >
           </div>
         </div>
@@ -76,17 +75,16 @@
           />
           <div class="p-6">
             <h3 class="text-2xl font-bold mb-2 text-gray-800">
-              Project Translator
+              {{ $t("portfolio.proj3.title") }}
             </h3>
             <p class="text-gray-600 mb-4">
-              A simple web tool for translating text between languages ​​in
-              real-time.
+              {{ $t("portfolio.proj3.desc") }}
             </p>
             <a
               href="https://github.com/MwanNajib"
               target="_blank"
               class="text-red-600 font-semibold hover:underline"
-              >Lihat Detail &rarr;</a
+              >{{ $t("portfolio.detail") }}</a
             >
           </div>
         </div>
@@ -101,7 +99,9 @@
 
 <style scoped>
 .project-card {
-  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  transition:
+    transform 0.5s ease,
+    box-shadow 0.5s ease;
   transform-style: preserve-3d;
 }
 

@@ -3,7 +3,18 @@ export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
 
-  modules: ["@nuxtjs/tailwindcss", "@nuxtjs/google-fonts"],
+  modules: ["@nuxtjs/tailwindcss", "@nuxtjs/google-fonts", "@nuxtjs/i18n"],
+
+  i18n: {
+    locales: [
+      { code: "en", name: "English", file: "en.json" },
+      { code: "id", name: "Bahasa Indonesia", file: "id.json" },
+    ],
+    defaultLocale: "id",
+    lazy: true,
+    langDir: "i18n/locales/",
+    strategy: "prefix_except_default",
+  },
 
   googleFonts: {
     families: {

@@ -1,0 +1,77 @@
+{
+  "nav": {
+    "home": "BERANDA",
+    "about": "TENTANG",
+    "internship": "MAGANG",
+    "projects": "PROYEK",
+    "contact": "KONTAK"
+  },
+  "hero": {
+    "subtitle": "Lulusan Baru Teknologi Rekayasa Komputer | Penggemar Pengembangan Web | Penggemar Teknik & Pemeliharaan.",
+    "button": "Portofolio"
+  },
+  "profile": {
+    "name": "Muhammad Wisnu Ainun Najib",
+    "description": "Pengembang Web | IT",
+    "location": "Semarang, Jawa Tengah"
+  },
+  "sidebar": {
+    "sections": "Bagian Portofolio",
+    "contact_info": "Informasi Kontak",
+    "skills_tools": "Keterampilan & Alat Inti"
+  },
+  "about": {
+    "title": "RINGKASAN PROFESIONAL",
+    "description": "Lulusan D4 Teknologi Rekayasa Komputer, Jurusan Teknik Elektro Politeknik Negeri Semarang dengan minat besar di bidang IT, khususnya pengembangan web dan pemeliharaan sistem. Berpengalaman dalam membangun website dan merawat sistem. Selama magang, saya mengasah kemampuan manajemen sistem dan pemecahan masalah teknis di lingkungan nyata. Memiliki kemampuan komunikasi dan kerja sama tim yang baik, siap berkontribusi pada proyek-proyek inovatif dan menantang."
+  },
+  "internship": {
+    "title": "PENGALAMAN KERJA",
+    "position": "Posisi:",
+    "duration": "Durasi:",
+    "job1": {
+      "company": "AirNav Indonesia",
+      "position": "IT Development",
+      "duration": "Okt 2025 - Sekarang",
+      "desc1": "Mengembangkan alur autentikasi dari UI ke integrasi API Back-End, termasuk penanganan error.",
+      "desc2": "Membangun komponen UI yang dapat digunakan kembali dan mengimplementasikan desain responsif penuh untuk aplikasi manajemen acara (Navevent).",
+      "desc3": "Melakukan proses debug dan pemeliharaan pasca-deployment, termasuk memperbaiki bug sinkronisasi data (state management) antara tampilan dan database."
+    },
+    "job2": {
+      "company": "PT. Jasamarga Tollroad Operator Ruas Semarang Demak",
+      "position": "IT Support",
+      "duration": "Sept 2024 – Jan 2025",
+      "desc1": "Merekam laporan AVC bulanan sebagai bagian pantauan operasional, merekap dan melaporkan arus lalu lintas harian pada gerbang tol masuk dan keluar beserta matriks dan tarifnya.",
+      "desc2": "Mengunggah laporan kejadian kendaraan via web Jasa Marga Tollroad Operator, membuat surat serah terima alat fungsi layanan jalan dan medis, serta membuat poster himbauan atau peringatan jalan tol.",
+      "desc3": "Pemantauan layar sistem berkala untuk melihat keakuratan klasifikasi kendaraan, memperbaiki palang otomatis yang tidak stabil, memperbaiki kerusakan mesin cetak struk transaksi, mengecek mesin EDC.",
+      "desc4": "Melakukan perawatan dan pengecekan Genset gerbang tol, melakukan rekapan suhu ruang server untuk perawatannya tiap bulan demi menjaga kondisi server agar tetap stabil."
+    }
+  },
+  "portfolio": {
+    "title": "Portofolio",
+    "detail": "Lihat Detail \u2192",
+    "proj1": {
+      "title": "Proyek NavEvent",
+      "desc": "Platform web untuk penemuan, pendaftaran, dan manajemen acara."
+    },
+    "proj2": {
+      "title": "Website Makroni Kapok-Kapok",
+      "desc": "Profil perusahaan dan website e-commerce untuk merk 'Makroni Kapok-Kapok'."
+    },
+    "proj3": {
+      "title": "Proyek Translator",
+      "desc": "Alat web sederhana untuk menerjemahkan teks antar bahasa secara real-time."
+    }
+  },
+  "contact": {
+    "title": "Hubungi Saya",
+    "name": "Nama",
+    "namePlaceholder": "Nama Anda",
+    "email": "Email",
+    "emailPlaceholder": "Email Anda",
+    "message": "Pesan",
+    "messagePlaceholder": "Pesan Anda...",
+    "btn": "Kirim Pesan",
+    "linkedin": "LinkedIn",
+    "github": "GitHub"
+  }
+}

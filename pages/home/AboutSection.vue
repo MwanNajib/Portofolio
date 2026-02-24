@@ -15,17 +15,10 @@
           <h2
             class="text-4xl font-semibold text-gray-800 mb-4 text-center md:text-left"
           >
-            PROFESSIONAL SUMMARY
+            {{ $t("about.title") }}
           </h2>
           <p class="text-lg text-gray-600 mb-4 text-center md:text-justify">
-            A graduate of D4 Computer Engineering Technology, Department of
-            Electrical Engineering, from Politeknik Negeri Semarang with a
-            strong interest in IT, particularly in engineering and maintenance
-            roles. Experienced in website development and system maintenance.
-            During an internship, I honed my skills in system management and
-            technical problem-solving in real-world environments. Equipped with
-            solid communication and teamwork abilities, ready to contribute to
-            challenging and innovative projects.
+            {{ $t("about.description") }}
 
             <a
               href="https://drive.google.com/file/d/1hbfi8GWl3vcckYaw1qMkt6j6vGhpH23t/view?usp=sharing"

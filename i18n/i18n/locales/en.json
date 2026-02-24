@@ -1,0 +1,77 @@
+{
+  "nav": {
+    "home": "HOME",
+    "about": "ABOUT",
+    "internship": "INTERNSHIP",
+    "projects": "PROJECTS",
+    "contact": "CONTACT"
+  },
+  "hero": {
+    "subtitle": "Fresh Graduate Computer Engineering Technology Student | Web Developer Enthusiast | Engineering & Maintenance Enthusiast.",
+    "button": "Portfolio"
+  },
+  "profile": {
+    "name": "Muhammad Wisnu Ainun Najib",
+    "description": "Web Developer | IT",
+    "location": "Semarang, Jawa Tengah"
+  },
+  "sidebar": {
+    "sections": "Portfolio Sections",
+    "contact_info": "Contact Information",
+    "skills_tools": "Core Skills & Tools"
+  },
+  "about": {
+    "title": "PROFESSIONAL SUMMARY",
+    "description": "A graduate of D4 Computer Engineering Technology, Department of Electrical Engineering, from Politeknik Negeri Semarang with a strong interest in IT, particularly in engineering and maintenance roles. Experienced in website development and system maintenance. During an internship, I honed my skills in system management and technical problem-solving in real-world environments. Equipped with solid communication and teamwork abilities, ready to contribute to challenging and innovative projects."
+  },
+  "internship": {
+    "title": "WORK EXPERIENCE",
+    "position": "Position:",
+    "duration": "Duration:",
+    "job1": {
+      "company": "AirNav Indonesia",
+      "position": "IT Development",
+      "duration": "Oct 2025 - Present",
+      "desc1": "Develop authentication flow from UI to Back-End API integration, including error handling.",
+      "desc2": "Building reusable UI components and implementing fully responsive design for event management application (Navevent).",
+      "desc3": "Perform post-deployment debugging and maintenance, including fixing data synchronization (state management) bugs between views and the database."
+    },
+    "job2": {
+      "company": "PT. Jasamarga Tollroad Operator Semarang Demak Section",
+      "position": "IT Support",
+      "duration": "Sept 2024 – Jan 2025",
+      "desc1": "Recorded monthly AVC reports as part of operational monitoring, documented and reported daily traffic flow data at entrance and exit toll gates, including matrices and tariffs.",
+      "desc2": "Uploaded vehicle incident reports via the Jasa Marga Tollroad Operator website, created handover letters for patrol and ambulance equipment, and designed posters, advertisements, road signs, and highway warnings.",
+      "desc3": "Monitored system screens regularly to ensure vehicle classification accuracy, repaired unstable automatic barriers, fixed issues with transaction printers, and checked EDC machines.",
+      "desc4": "Performed maintenance and inspections of toll gate generators, monitored monthly server room temperatures for system maintenance, and conducted audits to ensure the readiness of all devices, facilities, and infrastructure."
+    }
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "detail": "View Details \u2192",
+    "proj1": {
+      "title": "Project NavEvent",
+      "desc": "Web platform for event discovery, registration and management."
+    },
+    "proj2": {
+      "title": "Makroni Kapok-Kapok Website",
+      "desc": "Company profile and e-commerce website for the 'Makroni Kapok-Kapok' brand."
+    },
+    "proj3": {
+      "title": "Project Translator",
+      "desc": "A simple web tool for translating text between languages in real-time."
+    }
+  },
+  "contact": {
+    "title": "Contact Me",
+    "name": "Name",
+    "namePlaceholder": "Your Name",
+    "email": "Email",
+    "emailPlaceholder": "Your Email",
+    "message": "Message",
+    "messagePlaceholder": "Your Message...",
+    "btn": "Send Message",
+    "linkedin": "LinkedIn",
+    "github": "GitHub"
+  }
+}
