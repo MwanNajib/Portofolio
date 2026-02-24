@@ -45,20 +45,19 @@
             <h1 class="text-2xl font-bold text-gray-900 dark:text-gray-100">
               Muhammad Wisnu Ainun Najib
             </h1>
-            <span class="text-gray-500 dark:text-gray-400 text-[14px]"
-              >He/Him</span
-            >
+            <span class="text-gray-500 dark:text-gray-400 text-[14px]">{{
+              $t("profile.pronouns")
+            }}</span>
           </div>
 
           <p
             class="text-[15px] text-gray-900 dark:text-gray-200 leading-snug mb-2 pr-6"
           >
-            Frontend Developer - IT Development at AirNav Indonesia | Web
-            Developer Enthusiast | Engineering & Maintenance Enthusias
+            {{ $t("profile.role") }}
           </p>
 
           <p class="text-[14px] text-gray-500 dark:text-gray-400 mb-5">
-            Semarang, Jawa Tengah, Indonesia
+            {{ $t("profile.location") }}
           </p>
 
           <!-- Standard Portfolio Action Buttons -->
@@ -67,18 +66,21 @@
               href="mailto:najib.mwa@gmail.com"
               class="flex items-center gap-2 bg-[#0a66c2] text-white font-semibold text-[15px] px-5 py-1.5 rounded-full hover:bg-[#004182] transition shadow-sm"
             >
-              <i class="fas fa-paper-plane text-[13px]"></i> Kirim Pesan
+              <i class="fas fa-paper-plane text-[13px]"></i>
+              {{ $t("profile.btnMessage") }}
             </a>
             <button
               class="flex items-center gap-2 bg-transparent text-[#0a66c2] dark:text-blue-400 font-semibold text-[15px] px-5 py-1.5 rounded-full hover:bg-blue-50 dark:hover:bg-blue-900/20 transition border-[1.5px] border-[#0a66c2] dark:border-blue-400 shadow-sm"
             >
-              <i class="fas fa-file-download text-[13px]"></i> Unduh CV
+              <i class="fas fa-file-download text-[13px]"></i>
+              {{ $t("profile.btnDownload") }}
             </button>
             <NuxtLink
-              to="/portfolio"
+              :to="localePath('/portfolio')"
               class="flex items-center gap-2 bg-transparent text-gray-600 dark:text-gray-300 font-semibold text-[15px] px-5 py-1.5 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition border-[1.5px] border-gray-500 dark:border-gray-400 shadow-sm"
             >
-              <i class="fas fa-folder-open text-[13px]"></i> Lihat Proyek
+              <i class="fas fa-folder-open text-[13px]"></i>
+              {{ $t("profile.btnProjects") }}
             </NuxtLink>
           </div>
         </div>
@@ -132,23 +134,21 @@
     <!-- About Section in Profile Page -->
     <div class="px-6 py-6 border-t border-gray-100 dark:border-gray-800">
       <h2 class="text-[18px] font-bold text-gray-900 dark:text-gray-100 mb-3">
-        Tentang
+        {{ $t("profile.aboutTitle") }}
       </h2>
       <p
         class="text-[14px] text-gray-800 dark:text-gray-300 leading-relaxed whitespace-pre-line"
       >
-        Halo! Saya seorang Frontend Developer yang antusias dalam membangun
-        aplikasi web responsif dan ramah pengguna. Dengan fondasi teknis yang
-        kuat di teknologi web modern, saya selalu bersemangat untuk memecahkan
-        masalah kompleks menjadi solusi desain antarmuka yang elegan dan
-        optimal. Saat ini menjadi bagian dari tim IT Development di AirNav
-        Indonesia, saya mendapatkan pengalaman langsung terhadap lingkungan
-        profesional dan proyek rill yang menuntut performa sistem tingkat tinggi
-        dan keandalan. Selain rekayasa perangkat lunak, saya mendalami
-        perancangan arsitektur dan perawatan berkelanjutan.
+        {{ $t("profile.aboutDesc1") }}
+        <br /><br />
+        {{ $t("profile.aboutDesc2") }}
       </p>
     </div>
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+import { useLocalePath } from "#imports";
+
+const localePath = useLocalePath();
+</script>
