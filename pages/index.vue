@@ -283,12 +283,12 @@
             class="bg-[#f8fafd] dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-md p-4 mb-4 flex gap-4 mt-2"
           >
             <div
-              class="w-12 h-12 bg-gray-200 dark:bg-gray-700 flex-shrink-0 flex items-center justify-center border border-gray-200 dark:border-gray-700 rounded-sm"
+              class="w-12 h-12 bg-gray-200 dark:bg-gray-700 flex-shrink-0 flex items-center justify-center border border-gray-200 dark:border-gray-700 rounded-full overflow-hidden"
             >
               <img
                 src="/image/logoAirnav.png"
                 alt="Airnav Indonesia"
-                class="w-full h-full object-cover rounded-sm mix-blend-multiply dark:mix-blend-normal opacity-80"
+                class="w-full h-full object-cover mix-blend-multiply dark:mix-blend-normal opacity-80"
               />
             </div>
             <div>

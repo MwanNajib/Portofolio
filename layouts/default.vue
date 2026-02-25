@@ -70,7 +70,7 @@
 
               <div class="flex items-center gap-2 mt-3">
                 <div
-                  class="w-[18px] h-[18px] rounded-sm overflow-hidden bg-white border border-gray-200"
+                  class="w-[18px] h-[18px] rounded-full overflow-hidden bg-white border border-gray-200"
                 >
                   <img
                     src="/image/logoAirnav.png"

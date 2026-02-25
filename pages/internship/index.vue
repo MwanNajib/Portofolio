@@ -47,12 +47,12 @@
           <!-- Experience Item -->
           <div class="flex gap-4 mb-6">
             <div
-              class="w-14 h-14 bg-gray-100 dark:bg-[#38434f] flex-shrink-0 flex items-center justify-center border border-gray-200 dark:border-gray-700 rounded-sm"
+              class="w-14 h-14 bg-gray-100 dark:bg-[#38434f] flex-shrink-0 flex items-center justify-center border border-gray-200 dark:border-gray-700 rounded-full overflow-hidden"
             >
               <img
                 src="/image/logoAirnav.png"
                 alt="Company Logo"
-                class="w-full h-full object-cover rounded-sm mix-blend-multiply dark:mix-blend-normal opacity-80"
+                class="w-full h-full object-cover mix-blend-multiply dark:mix-blend-normal opacity-80"
               />
             </div>
             <div

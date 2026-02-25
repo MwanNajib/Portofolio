@@ -180,7 +180,7 @@
                   class="flex items-center gap-3 hover:underline group text-left"
                 >
                   <div
-                    class="w-10 h-10 rounded-md overflow-hidden border border-gray-200 dark:border-gray-700 shadow-sm flex-shrink-0"
+                    class="w-10 h-10 rounded-full overflow-hidden border border-gray-200 dark:border-gray-700 shadow-sm flex-shrink-0"
                   >
                     <img
                       src="/image/logoAirnav.png"
@@ -198,7 +198,7 @@
                   class="flex items-center gap-3 hover:underline group text-left"
                 >
                   <div
-                    class="w-10 h-10 bg-white rounded-md flex items-center justify-center border border-gray-200 dark:border-gray-700 overflow-hidden shadow-sm flex-shrink-0 p-1"
+                    class="w-10 h-10 bg-white rounded-full flex items-center justify-center border border-gray-200 dark:border-gray-700 overflow-hidden shadow-sm flex-shrink-0 p-1"
                   >
                     <img
                       src="/image/LogoPolines.png"
