@@ -5,27 +5,15 @@
     <div
       class="max-w-[1128px] mx-auto px-4 lg:px-0 flex justify-between items-center h-[52px]"
     >
-      <!-- Left side: Logo & Search -->
-      <div class="flex items-center gap-2">
+      <!-- Left side: Personal Branding/Logo -->
+      <div class="flex items-center">
         <NuxtLink
           :to="localePath('/')"
-          class="text-white bg-[#0a66c2] text-xl font-bold px-1.5 py-0.5 rounded-[3px] leading-none shrink-0"
-          style="font-family: Arial, sans-serif"
+          class="text-xl font-bold tracking-tight text-gray-900 dark:text-white"
         >
-          in
+          <span class="text-[#0a66c2] dark:text-blue-400">Wisnu's</span>
+          Portfolio
         </NuxtLink>
-        <div class="relative hidden sm:block">
-          <div
-            class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
-          >
-            <Search class="text-gray-500 w-[14px] h-[14px]" />
-          </div>
-          <input
-            type="text"
-            class="bg-[#eef3f8] dark:bg-[#38434f] dark:text-gray-200 text-gray-900 text-[14px] rounded-[4px] focus:ring-1 focus:ring-gray-400 focus:outline-none focus:bg-white focus:border-gray-400 block w-[280px] pl-10 h-[34px] transition-colors"
-            placeholder="Search"
-          />
-        </div>
       </div>
 
       <!-- Right side: Menu Icons -->
@@ -95,9 +83,9 @@
             @click="isProfileMenuOpen = !isProfileMenuOpen"
           >
             <img
-              src="/image/pnav2.jpg"
+              src="/image/Profil.jpg"
               alt="Profile"
-              class="w-[24px] h-[24px] rounded-full object-cover mb-[2px] transition-transform"
+              class="w-[24px] h-[24px] rounded-full object-cover mb-[2px] transition-transform shadow-sm"
               :class="{ 'scale-110': isProfileMenuOpen }"
             />
             <div
@@ -121,13 +109,30 @@
           <!-- Dropdown Menu -->
           <div
             v-if="isProfileMenuOpen"
-            class="absolute top-[52px] right-0 translate-y-1 w-[260px] bg-white dark:bg-[#1d2226] border border-gray-200 dark:border-gray-700 rounded-lg shadow-xl py-2 flex flex-col text-left z-50 cursor-default animate-in fade-in zoom-in-95 duration-200"
+            class="absolute top-[52px] right-0 translate-y-1 w-[260px] bg-white dark:bg-[#1d2226] border border-gray-200 dark:border-gray-700 rounded-lg shadow-xl flex flex-col text-left z-50 cursor-default animate-in fade-in zoom-in-95 duration-200 overflow-hidden"
           >
-            <div
-              class="px-4 py-3 border-b border-gray-200 dark:border-gray-700 font-bold text-gray-900 dark:text-white text-[15px]"
+            <!-- Profile Link Header -->
+            <NuxtLink
+              :to="localePath('/Profil')"
+              class="flex items-center gap-3 px-4 py-3 border-b border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors cursor-pointer"
+              @click="isProfileMenuOpen = false"
             >
-              Pengaturan & Privasi
-            </div>
+              <img
+                src="/image/Profil.jpg"
+                alt="Profile"
+                class="w-[48px] h-[48px] rounded-full object-cover shadow-sm"
+              />
+              <div class="flex flex-col">
+                <span
+                  class="font-bold text-gray-900 dark:text-white text-[15px] leading-tight"
+                  >Muhammad Wisnu...
+                </span>
+                <span
+                  class="text-blue-600 dark:text-blue-400 font-semibold text-[13px] mt-1 hover:underline"
+                  >Lihat Profil</span
+                >
+              </div>
+            </NuxtLink>
 
             <!-- Language Selection -->
             <div
@@ -203,10 +208,9 @@
 
 <script setup>
 import { ref, onMounted } from "vue";
-import { useI18n, useLocalePath } from "#imports";
+import { useI18n, useLocalePath, useState } from "#imports";
 import { useRouter } from "vue-router";
 import {
-  Search,
   Home,
   User,
   Building,

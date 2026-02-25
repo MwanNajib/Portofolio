@@ -44,7 +44,7 @@
             <div class="absolute top-[28px] left-4">
               <div class="relative w-[72px] h-[72px]">
                 <img
-                  src="/image/pnav2.jpg"
+                  src="/image/Profil.jpg"
                   alt="Profile"
                   class="w-[72px] h-[72px] rounded-full border-2 border-white dark:border-[#1d2226] bg-white dark:bg-[#1d2226] object-cover transition-colors"
                 />
@@ -73,7 +73,7 @@
                   class="w-[18px] h-[18px] rounded-sm overflow-hidden bg-white border border-gray-200"
                 >
                   <img
-                    src="/image/pnav2.jpg"
+                    src="/image/logoAirnav.png"
                     alt="AirNav"
                     class="w-full h-full object-cover mix-blend-multiply opacity-80"
                   />
@@ -216,12 +216,55 @@
         </div>
       </aside>
     </main>
+
+    <!-- Welcome Modal -->
+    <div
+      v-if="showWelcomeModal"
+      class="fixed inset-0 z-[100] flex items-center justify-center bg-black/50 backdrop-blur-sm px-4"
+    >
+      <div
+        class="bg-white dark:bg-[#1d2226] w-full max-w-md rounded-xl shadow-2xl overflow-hidden animate-in zoom-in-95 duration-300 border border-gray-200 dark:border-gray-700"
+      >
+        <div class="p-6">
+          <div
+            class="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-full flex items-center justify-center mb-4 text-2xl"
+          >
+            👋
+          </div>
+          <h2 class="text-xl font-bold text-gray-900 dark:text-white mb-2">
+            Selamat Datang di Portofolio Saya!
+          </h2>
+          <p
+            class="text-[14px] text-gray-600 dark:text-gray-400 mb-6 leading-relaxed"
+          >
+            Senang melihat Anda di sini. Boleh saya tahu nama Anda agar saya
+            bisa menyapa Anda dengan lebih baik?
+          </p>
+
+          <form @submit.prevent="saveGuestName">
+            <input
+              v-model="tempName"
+              type="text"
+              placeholder="Masukkan nama panggilan Anda..."
+              required
+              class="w-full border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-[#38434f] text-gray-900 dark:text-gray-100 rounded-lg px-4 py-3 text-[15px] focus:outline-none focus:ring-2 focus:ring-[#0a66c2] focus:border-transparent transition-all mb-4"
+            />
+            <button
+              type="submit"
+              class="w-full bg-[#0a66c2] hover:bg-[#004182] text-white font-semibold py-3 px-4 rounded-lg transition-colors flex justify-center items-center gap-2"
+            >
+              Mulai Eksplorasi <i class="fas fa-arrow-right text-sm"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script setup>
-import { computed } from "vue";
-import { useRoute, useLocalePath } from "#imports";
+import { computed, ref, onMounted } from "vue";
+import { useRoute, useLocalePath, useState } from "#imports";
 
 const route = useRoute();
 const localePath = useLocalePath();
@@ -229,4 +272,28 @@ const localePath = useLocalePath();
 const isProfilePage = computed(() => {
   return route.path.toLowerCase().includes("/profil");
 });
+
+const showWelcomeModal = ref(false);
+const tempName = ref("");
+const guestName = useState("guestName", () => "");
+
+onMounted(() => {
+  const savedName = localStorage.getItem("guest-name");
+  if (savedName) {
+    guestName.value = savedName;
+  } else {
+    // Beri jeda sedikit agar modal tidak langsung numpuk saat load pertama
+    setTimeout(() => {
+      showWelcomeModal.value = true;
+    }, 500);
+  }
+});
+
+const saveGuestName = () => {
+  if (tempName.value.trim()) {
+    guestName.value = tempName.value.trim();
+    localStorage.setItem("guest-name", guestName.value);
+    showWelcomeModal.value = false;
+  }
+};
 </script>
