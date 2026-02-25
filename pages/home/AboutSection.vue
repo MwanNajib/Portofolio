@@ -6,7 +6,7 @@
       >
         <div class="md:w-1/3" data-aos="fade-right">
           <img
-            src="/image/aboutme.jpg"
+            src="/image/Profil.jpg"
             alt="Foto Tentang Saya"
             class="rounded-full shadow-lg w-72 h-72 mx-auto object-cover object-[50%_30%]"
           />
