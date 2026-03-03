@@ -67,18 +67,6 @@
             </div>
           </div>
         </div>
-
-        <!-- About Section Skeleton -->
-        <div class="px-6 py-6 border-t border-gray-100 dark:border-gray-800">
-          <div
-            class="h-5 bg-gray-200 dark:bg-gray-700 rounded w-1/4 mb-4"
-          ></div>
-          <div class="space-y-3">
-            <div class="h-4 bg-gray-200 dark:bg-gray-700 rounded w-full"></div>
-            <div class="h-4 bg-gray-200 dark:bg-gray-700 rounded w-11/12"></div>
-            <div class="h-4 bg-gray-200 dark:bg-gray-700 rounded w-5/6"></div>
-          </div>
-        </div>
       </div>
     </template>
 
@@ -89,26 +77,18 @@
       >
         <!-- Banner Section -->
         <div
-          class="h-[180px] bg-gradient-to-r from-[#1b1c4b] to-[#01091a] w-full relative overflow-hidden flex items-center"
+          class="h-[180px] w-full relative overflow-hidden flex items-center bg-gray-200 dark:bg-gray-700"
         >
-          <!-- Abstract network pattern simulation -->
+          <!-- Background Image -->
+          <img
+            src="/image/BannerProfil.jpg"
+            alt="Profile Banner"
+            class="absolute inset-0 w-full h-full object-cover"
+          />
+          <!-- Gradient Overlay for better text readability -->
           <div
-            class="absolute left-0 top-0 w-2/3 h-full opacity-20 transform -skew-x-12"
-            style="
-              background-image: radial-gradient(#fff 1px, transparent 1px);
-              background-size: 8px 8px;
-            "
+            class="absolute inset-0 bg-gradient-to-l from-black/60 via-transparent to-transparent"
           ></div>
-
-          <!-- Text on Banner -->
-          <div class="absolute right-6 z-10 hidden sm:flex flex-col items-end">
-            <h2 class="text-white text-xl font-bold tracking-wide">
-              Muhammad Wisnu Ainun Najib
-            </h2>
-            <p class="text-gray-300 text-[11px] mt-1">
-              najib.mwa@gmail.com | @mwisnunajib
-            </p>
-          </div>
         </div>
 
         <!-- Avatar & Main Content Section -->
@@ -130,11 +110,7 @@
                 <h1 class="text-2xl font-bold text-gray-900 dark:text-gray-100">
                   Muhammad Wisnu Ainun Najib
                 </h1>
-                <span class="text-gray-500 dark:text-gray-400 text-[14px]">{{
-                  $t("profile.pronouns")
-                }}</span>
               </div>
-
               <p
                 class="text-[15px] text-gray-900 dark:text-gray-200 leading-snug mb-2 pr-6"
               >
@@ -214,22 +190,6 @@
               </div>
             </div>
           </div>
-        </div>
-
-        <!-- About Section in Profile Page -->
-        <div class="px-6 py-6 border-t border-gray-100 dark:border-gray-800">
-          <h2
-            class="text-[18px] font-bold text-gray-900 dark:text-gray-100 mb-3"
-          >
-            {{ $t("profile.aboutTitle") }}
-          </h2>
-          <p
-            class="text-[14px] text-gray-800 dark:text-gray-300 leading-relaxed whitespace-pre-line"
-          >
-            {{ $t("profile.aboutDesc1") }}
-            <br /><br />
-            {{ $t("profile.aboutDesc2") }}
-          </p>
         </div>
       </div>
     </template>

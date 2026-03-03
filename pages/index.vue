@@ -95,12 +95,7 @@
                   Muhammad Wisnu Ainun Najib
                 </h3>
                 <p class="text-[12px] text-gray-500 dark:text-gray-400">
-                  Web Developer | IT
-                </p>
-                <p
-                  class="text-[12px] text-gray-500 dark:text-gray-400 flex items-center gap-1"
-                >
-                  1d • <i class="fas fa-globe-americas"></i>
+                  IT Developer
                 </p>
               </div>
             </div>
@@ -116,16 +111,13 @@
             <h4
               class="text-[16px] font-bold text-gray-900 dark:text-white mb-1"
             >
-              Halo, {{ guestName }}! 👋
+              Halo, {{ guestName }}!💻
             </h4>
             <p
               class="text-[14px] text-gray-800 dark:text-gray-300 leading-relaxed"
             >
-              Selamat datang di halaman beranda portofolio saya. Anggap saja ini
-              adalah Feed media sosial profesional Anda—tetapi didedikasikan
-              sepenuhnya untuk menampilkan rekam jejak, proyek, serta pengalaman
-              saya. Silakan bernavigasi lewat menu di atas untuk lebih
-              lengkapnya!
+              Selamat datang di Website portofolio saya. Di sini, saya merangkum
+              diri saya dari berbagai hal tentang saya !
             </p>
           </div>
         </div>
@@ -175,12 +167,7 @@
                   Muhammad Wisnu Ainun Najib
                 </h3>
                 <p class="text-[12px] text-gray-500 dark:text-gray-400">
-                  Web Developer | IT
-                </p>
-                <p
-                  class="text-[12px] text-gray-500 dark:text-gray-400 flex items-center gap-1"
-                >
-                  1d • <i class="fas fa-globe-americas"></i>
+                  IT Development
                 </p>
               </div>
             </div>
@@ -262,12 +249,7 @@
                   Muhammad Wisnu Ainun Najib
                 </h3>
                 <p class="text-[14px] text-gray-800 dark:text-gray-300">
-                  started a new position as Frontend Developer - IT Development
-                </p>
-                <p
-                  class="text-[12px] text-gray-500 dark:text-gray-400 flex items-center gap-1"
-                >
-                  3w • <i class="fas fa-globe-americas"></i>
+                  IT Development
                 </p>
               </div>
             </div>
@@ -295,7 +277,7 @@
               <h4
                 class="font-bold text-[16px] text-gray-900 dark:text-gray-100"
               >
-                Frontend Developer - IT Development
+                IT Development
               </h4>
               <p class="text-[14px] text-gray-800 dark:text-gray-300">
                 AirNav Indonesia
@@ -399,12 +381,7 @@
                   Muhammad Wisnu Ainun Najib
                 </h3>
                 <p class="text-[14px] text-gray-800 dark:text-gray-300">
-                  published a new project
-                </p>
-                <p
-                  class="text-[12px] text-gray-500 dark:text-gray-400 flex items-center gap-1"
-                >
-                  1mo • <i class="fas fa-globe-americas"></i>
+                  IT Development
                 </p>
               </div>
             </div>
@@ -518,12 +495,7 @@
                   Muhammad Wisnu Ainun Najib
                 </h3>
                 <p class="text-[14px] text-gray-800 dark:text-gray-300">
-                  is open to new opportunities
-                </p>
-                <p
-                  class="text-[12px] text-gray-500 dark:text-gray-400 flex items-center gap-1"
-                >
-                  2mo • <i class="fas fa-globe-americas"></i>
+                  IT Development
                 </p>
               </div>
             </div>
@@ -559,7 +531,7 @@
                 Contact Me
               </h4>
               <p class="text-[14px] text-gray-600 dark:text-gray-400 mt-1">
-                najib.mwa@gmail.com
+                muhammadwisnuainunnajib@gmail.com
               </p>
             </div>
           </div>

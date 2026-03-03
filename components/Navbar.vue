@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="bg-white dark:bg-[#1d2226] sticky top-0 left-0 w-full z-50 border-b border-gray-200 dark:border-gray-700 transition-colors"
+    class="bg-white dark:bg-[#1d2226] fixed top-0 left-0 w-full z-50 border-b border-gray-200 dark:border-gray-700 transition-colors"
   >
     <div
       class="max-w-[1128px] mx-auto px-4 lg:px-0 flex justify-between items-center h-[52px]"
@@ -9,10 +9,10 @@
       <div class="flex items-center">
         <NuxtLink
           :to="localePath('/')"
-          class="text-xl font-bold tracking-tight text-gray-900 dark:text-white"
+          class="text-[17px] sm:text-xl font-bold tracking-tight text-gray-900 dark:text-white whitespace-nowrap"
         >
           <span class="text-[#0a66c2] dark:text-blue-400">Wisnu's</span>
-          Portfolio
+          <span class="hidden sm:inline pl-1">Portfolio</span>
         </NuxtLink>
       </div>
 
@@ -23,7 +23,7 @@
         <NuxtLink
           :to="localePath('/')"
           active-class="text-gray-900 border-b-[2px] border-gray-900 dark:text-white dark:border-white"
-          class="flex flex-col items-center justify-center cursor-pointer hover:text-gray-900 dark:hover:text-white transition-colors w-[50px] md:w-[70px] h-full"
+          class="flex flex-col items-center justify-center cursor-pointer hover:text-gray-900 dark:hover:text-white transition-colors w-11 sm:w-[50px] md:w-[70px] h-full"
         >
           <Home class="w-[20px] h-[20px] mb-[2px]" />
           <span
@@ -34,7 +34,7 @@
         <NuxtLink
           :to="localePath('/about')"
           active-class="text-gray-900 border-b-[2px] border-gray-900 dark:text-white dark:border-white"
-          class="flex flex-col items-center justify-center cursor-pointer hover:text-gray-900 dark:hover:text-white transition-colors w-[50px] md:w-[70px] h-full"
+          class="flex flex-col items-center justify-center cursor-pointer hover:text-gray-900 dark:hover:text-white transition-colors w-11 sm:w-[50px] md:w-[70px] h-full"
         >
           <User class="w-[20px] h-[20px] mb-[2px]" />
           <span
@@ -45,7 +45,7 @@
         <NuxtLink
           :to="localePath('/internship')"
           active-class="text-gray-900 border-b-[2px] border-gray-900 dark:text-white dark:border-white"
-          class="flex flex-col items-center justify-center cursor-pointer hover:text-gray-900 dark:hover:text-white transition-colors w-[50px] md:w-[70px] h-full"
+          class="flex flex-col items-center justify-center cursor-pointer hover:text-gray-900 dark:hover:text-white transition-colors w-11 sm:w-[50px] md:w-[70px] h-full"
         >
           <Building class="w-[20px] h-[20px] mb-[2px]" />
           <span
@@ -56,7 +56,7 @@
         <NuxtLink
           :to="localePath('/portfolio')"
           active-class="text-gray-900 border-b-[2px] border-gray-900 dark:text-white dark:border-white"
-          class="flex flex-col items-center justify-center cursor-pointer hover:text-gray-900 dark:hover:text-white transition-colors w-[50px] md:w-[70px] h-full relative"
+          class="flex flex-col items-center justify-center cursor-pointer hover:text-gray-900 dark:hover:text-white transition-colors w-11 sm:w-[50px] md:w-[70px] h-full relative"
         >
           <Briefcase class="w-[20px] h-[20px] mb-[2px]" />
           <span
@@ -67,7 +67,7 @@
         <NuxtLink
           :to="localePath('/contact')"
           active-class="text-gray-900 border-b-[2px] border-gray-900 dark:text-white dark:border-white"
-          class="flex flex-col items-center justify-center cursor-pointer hover:text-gray-900 dark:hover:text-white transition-colors w-[50px] md:w-[70px] h-full border-r border-gray-200 dark:border-gray-700 pr-2 md:pr-4"
+          class="flex flex-col items-center justify-center cursor-pointer hover:text-gray-900 dark:hover:text-white transition-colors w-11 sm:w-[50px] md:w-[70px] h-full border-r border-gray-200 dark:border-gray-700 pr-2 md:pr-4"
         >
           <MessageSquare class="w-[20px] h-[20px] mb-[2px]" />
           <span
@@ -79,7 +79,7 @@
         <!-- Profil "Saya" (Profile Dropdown) -->
         <div class="relative flex items-center h-full">
           <div
-            class="flex flex-col items-center justify-center pl-2 md:pl-4 cursor-pointer hover:text-gray-900 dark:hover:text-white transition-colors min-w-[50px] md:min-w-[70px] h-[52px]"
+            class="flex flex-col items-center justify-center pl-1 sm:pl-2 md:pl-4 cursor-pointer hover:text-gray-900 dark:hover:text-white transition-colors min-w-[40px] sm:min-w-[50px] md:min-w-[70px] h-[52px]"
             @click="isProfileMenuOpen = !isProfileMenuOpen"
           >
             <img
@@ -91,7 +91,6 @@
             <div
               class="text-[10px] md:text-[12px] hidden sm:flex items-center gap-1 mt-[-2px] whitespace-nowrap"
             >
-              Saya
               <ChevronDown
                 class="w-3 h-3 text-gray-500 transition-transform"
                 :class="{ 'rotate-180': isProfileMenuOpen }"

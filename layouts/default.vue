@@ -1,14 +1,18 @@
 <template>
   <div
-    class="bg-[#f4f2ee] dark:bg-black min-h-screen font-sans text-gray-800 dark:text-gray-300 transition-colors"
+    class="bg-[#f4f2ee] dark:bg-black w-full min-h-screen font-sans text-gray-800 dark:text-gray-300 transition-colors overflow-x-clip flex flex-col"
   >
     <Navbar />
 
+    <!-- Padding Top offsets the 52px fixed navbar. Padding Bottom offsets the 48px fixed footer -->
     <main
-      class="max-w-[1128px] mx-auto pt-[76px] pb-12 px-4 lg:px-0 grid grid-cols-1 lg:grid-cols-4 gap-6"
+      class="flex-1 w-full max-w-[1128px] mx-auto pt-[76px] pb-[76px] px-4 lg:px-0 grid grid-cols-1 lg:grid-cols-4 gap-6 items-start"
     >
       <!-- Left Sidebar (Hide on Profile Page) -->
-      <aside v-if="!isProfilePage" class="lg:col-span-1 flex flex-col gap-4">
+      <aside
+        v-if="!isProfilePage"
+        class="lg:col-span-1 flex flex-col gap-4 lg:sticky lg:top-[76px] z-10 transition-transform"
+      >
         <!-- Profile Card -->
         <div
           class="bg-white dark:bg-[#1d2226] rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 overflow-hidden relative transition-colors"
@@ -20,24 +24,18 @@
           >
             <!-- Banner -->
             <div
-              class="h-[72px] bg-gradient-to-r from-[#1b1c4b] to-[#01091a] w-full relative overflow-hidden"
+              class="h-[72px] bg-gray-200 dark:bg-gray-700 w-full relative overflow-hidden"
             >
-              <!-- Abstract network pattern simulation -->
+              <!-- Background Image -->
+              <img
+                src="/image/BannerProfil.jpg"
+                alt="Profile Banner"
+                class="absolute inset-0 w-full h-full object-cover"
+              />
+              <!-- Gradient Overlay for better text readability -->
               <div
-                class="absolute left-0 top-0 w-2/3 h-full opacity-20 transform -skew-x-12"
-                style="
-                  background-image: radial-gradient(#fff 1px, transparent 1px);
-                  background-size: 8px 8px;
-                "
+                class="absolute inset-0 bg-gradient-to-l from-black/60 via-transparent to-transparent"
               ></div>
-              <!-- Text on Banner -->
-              <div class="absolute top-2 right-3 text-right">
-                <span
-                  class="text-white text-[9px] font-medium tracking-wide block opacity-90"
-                >
-                  Muhammad Wisnu Ainun Najib
-                </span>
-              </div>
             </div>
 
             <!-- Avatar -->
@@ -61,11 +59,10 @@
               <p
                 class="text-[12px] text-gray-800 dark:text-gray-300 mt-1 leading-snug"
               >
-                Frontend Developer - IT <br />
-                Development at AirNav Indonesia ...
+                Frontend Developer - IT Develop...
               </p>
               <p class="text-[12px] text-gray-500 dark:text-gray-400 mt-2">
-                Semarang, Jawa Tengah
+                Demak, Jawa Tengah
               </p>
 
               <div class="flex items-center gap-2 mt-3">
@@ -97,7 +94,9 @@
       </section>
 
       <!-- Right Sidebar -->
-      <aside class="lg:col-span-1 flex flex-col gap-4">
+      <aside
+        class="lg:col-span-1 flex flex-col gap-4 lg:sticky lg:top-[76px] z-10 transition-transform"
+      >
         <!-- Contact Information -->
         <div
           class="bg-white dark:bg-[#1d2226] rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4 transition-colors"
@@ -112,16 +111,16 @@
               <i
                 class="fas fa-envelope text-blue-600 dark:text-blue-400 mt-1"
               ></i>
-              <div>
+              <div class="overflow-hidden">
                 <p
                   class="text-[12px] font-semibold text-gray-800 dark:text-gray-200"
                 >
                   {{ $t("contact.email") }}
                 </p>
                 <a
-                  href="mailto:najib.mwa@gmail.com"
-                  class="text-[12px] text-blue-600 hover:underline"
-                  >najib.mwa@gmail.com</a
+                  href="mailto:muhammadwisnuainunnajib@gmail.com"
+                  class="text-[12px] text-blue-600 hover:underline truncate block w-full"
+                  >muhammadwisnuainunnajib@gmail.com</a
                 >
               </div>
             </div>
@@ -130,18 +129,19 @@
               <i
                 class="fab fa-linkedin text-blue-700 dark:text-blue-400 mt-1"
               ></i>
-              <div>
+              <div class="overflow-hidden">
                 <p
                   class="text-[12px] font-semibold text-gray-800 dark:text-gray-200"
                 >
                   {{ $t("contact.linkedin") }}
                 </p>
                 <a
-                  href="https://linkedin.com/in/mwisnunajib"
+                  href="https://www.linkedin.com/in/muhammadwisnuainunnajib/"
                   target="_blank"
-                  class="text-[12px] text-blue-600 hover:underline"
-                  >linkedin.com/in/mwisnunajib</a
+                  class="text-[12px] text-blue-600 hover:underline truncate block w-full"
                 >
+                  linkedin.com/in/muhammadwisnuainunnajib
+                </a>
               </div>
             </div>
 
@@ -149,18 +149,19 @@
               <i
                 class="fab fa-github text-gray-800 dark:text-gray-300 mt-1"
               ></i>
-              <div>
+              <div class="overflow-hidden">
                 <p
                   class="text-[12px] font-semibold text-gray-800 dark:text-gray-200"
                 >
                   {{ $t("contact.github") }}
                 </p>
                 <a
-                  href="https://github.com/mwisnunajib"
+                  href="https://github.com/MwanNajib"
                   target="_blank"
-                  class="text-[12px] text-blue-600 hover:underline"
-                  >github.com/mwisnunajib</a
+                  class="text-[12px] text-blue-600 hover:underline truncate block w-full"
                 >
+                  github.com/MwanNajib
+                </a>
               </div>
             </div>
           </div>
@@ -216,6 +217,16 @@
         </div>
       </aside>
     </main>
+
+    <!-- FOOTER -->
+    <footer
+      class="p-3 text-center text-xs text-gray-400 dark:text-gray-600 bg-white dark:bg-[#1d2226] border-t border-gray-200 dark:border-gray-700 w-full fixed bottom-0 left-0 z-50 h-[48px] flex items-center justify-center"
+    >
+      <div>
+        &copy; 2026 Developed by
+        <span class="font-bold text-blue-400">Muhammad Wisnu Ainun Najib</span>
+      </div>
+    </footer>
 
     <!-- Welcome Modal -->
     <div
