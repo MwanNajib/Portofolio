@@ -10,6 +10,13 @@
     "subtitle": "Fresh Graduate Computer Engineering Technology Student | Web Developer Enthusiast | Engineering & Maintenance Enthusiast.",
     "button": "Portfolio"
   },
+  "home": {
+    "welcome_greeting": "Hello, {name}!💻",
+    "welcome_message": "Welcome to my portfolio website. Here, I summarize various things about myself!",
+    "pinned_title": "Pinned Introduction",
+    "pinned_content": "Hello! I am Muhammad Wisnu Ainun Najib, a passionate IT professional and a recent graduate with a Bachelor of Applied Science (S.Tr.T) in Computer Engineering Technology from Politeknik Negeri Semarang. My journey in the tech industry has been driven by a strong fascination with how digital solutions can solve real-world problems...",
+    "show_more": "show more"
+  },
   "profile": {
     "name": "Muhammad Wisnu Ainun Najib",
     "description": "Web Developer | IT",
@@ -32,21 +39,32 @@
     "title": "PROFESSIONAL SUMMARY",
     "description": "A graduate of D4 Computer Engineering Technology, Department of Electrical Engineering, from Politeknik Negeri Semarang with a strong interest in IT, particularly in engineering and maintenance roles. Experienced in website development and system maintenance. During an internship, I honed my skills in system management and technical problem-solving in real-world environments. Equipped with solid communication and teamwork abilities, ready to contribute to challenging and innovative projects."
   },
+  "about_page": {
+    "me": "About Me",
+    "p1": "Hello! I am Muhammad Wisnu Ainun Najib, a passionate IT professional and a recent graduate with a Bachelor of Applied Science (S.Tr.T) in Computer Engineering Technology from Politeknik Negeri Semarang. My journey in the tech industry has been driven by a strong fascination with how digital solutions can solve real-world problems. With a solid foundation in engineering principles, I have cultivated a deep interest in software development, system maintenance, and crafting user-centered applications that are both highly functional and scalable.",
+    "p2": "Currently, I am expanding my technical expertise at AirNav Indonesia within the IT Development & Operations team. In this role, I actively develop modern, full-scale web applications. Recently, I built a comprehensive Helpdesk platform using Nuxt.js and an event management system using Vue.js. I truly enjoy the challenge of building dynamic and complex features, such as engineering sub-second latency real-time chat systems with WebSockets and integrating complex REST APIs with Role-Based Access Control (RBAC).",
+    "p3": "Beyond modern web development, I am an adaptable engineer who loves exploring the intersection of different technologies. My portfolio includes developing FishFresh, an offline-first mobile application integrated with a Computer Vision model (YOLOv8) to classify objects in real-time, as well as hands-on experience in IT infrastructure maintenance during my time at Jasa Marga (JMTO). Equipped with strong communication skills and a collaborative mindset, I am always ready to contribute to challenging, innovative projects that push the boundaries of technology and deliver tangible business value."
+  },
   "internship": {
     "title": "WORK EXPERIENCE",
     "position": "Position:",
     "duration": "Duration:",
+    "responsibilities": "Key Responsibilities & Achievements:",
+    "experience": "Experience",
+    "back_to_home": "Back to Home",
     "job1": {
       "company": "AirNav Indonesia",
-      "position": "IT Development",
-      "duration": "Oct 2025 - Present",
-      "desc1": "Develop authentication flow from UI to Back-End API integration, including error handling.",
-      "desc2": "Building reusable UI components and implementing fully responsive design for event management application (Navevent).",
-      "desc3": "Perform post-deployment debugging and maintenance, including fixing data synchronization (state management) bugs between views and the database."
+      "position": "IT Development - Enterprise Technology Planning & It Operations",
+      "duration": "Oktober 2025 - Present",
+      "desc1": "Developed 2 web applications: built the Helpdesk platform using Nuxt.js and AirNav Event using Vue.js, creating 15+ reusable components to accelerate development speed by 30%.",
+      "desc2": "Engineered a real-time Chat System for Helpdesk using WebSockets, enabling instant messaging between Admins and Reporters with sub-second latency.",
+      "desc2_short": "Engineered a real-time Chat System for Helpdesk using WebSockets, enabling instant messaging between Admins and Reporters...",
+      "desc3": "Integrated 20+ REST API endpoints, managing complex logic for RBAC Authentication and hierarchical data filtering across both platforms.",
+      "desc4": "Delivered 2 full-scale projects with 100% design fidelity, successfully translating Figma prototypes into functional code within the 3-month internship."
     },
     "job2": {
-      "company": "PT. Jasamarga Tollroad Operator Semarang Demak Section",
-      "position": "IT Support",
+      "company": "PT. Jasamarga Tollroad Operator (JMTO), Semarang - Demak Section",
+      "position": "IT Support – Transaction, Traffic, and Maintenance Services",
       "duration": "Sept 2024 – Jan 2025",
       "desc1": "Recorded monthly AVC reports as part of operational monitoring, documented and reported daily traffic flow data at entrance and exit toll gates, including matrices and tariffs.",
       "desc2": "Uploaded vehicle incident reports via the Jasa Marga Tollroad Operator website, created handover letters for patrol and ambulance equipment, and designed posters, advertisements, road signs, and highway warnings.",

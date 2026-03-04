@@ -10,6 +10,13 @@
     "subtitle": "Lulusan Baru Teknologi Rekayasa Komputer | Penggemar Pengembangan Web | Penggemar Teknik & Pemeliharaan.",
     "button": "Portofolio"
   },
+  "home": {
+    "welcome_greeting": "Halo, {name}!💻",
+    "welcome_message": "Selamat datang di Website portofolio saya. Di sini, saya merangkum diri saya dari berbagai hal tentang saya !",
+    "pinned_title": "Pinned Introduction",
+    "pinned_content": "Halo! Saya Muhammad Wisnu Ainun Najib, seorang profesional IT dan lulusan Sarjana Terapan (S.Tr.T) Teknologi Rekayasa Komputer dari Politeknik Negeri Semarang. Perjalanan saya di dunia teknologi didorong oleh ketertarikan yang kuat terhadap bagaimana solusi digital dapat memecahkan masalah di dunia nyata...",
+    "show_more": "show more"
+  },
   "profile": {
     "name": "Muhammad Wisnu Ainun Najib",
     "description": "Pengembang Web | IT",
@@ -32,21 +39,32 @@
     "title": "RINGKASAN PROFESIONAL",
     "description": "Lulusan D4 Teknologi Rekayasa Komputer, Jurusan Teknik Elektro Politeknik Negeri Semarang dengan minat besar di bidang IT, khususnya pengembangan web dan pemeliharaan sistem. Berpengalaman dalam membangun website dan merawat sistem. Selama magang, saya mengasah kemampuan manajemen sistem dan pemecahan masalah teknis di lingkungan nyata. Memiliki kemampuan komunikasi dan kerja sama tim yang baik, siap berkontribusi pada proyek-proyek inovatif dan menantang."
   },
+  "about_page": {
+    "me": "Tentang Saya",
+    "p1": "Halo! Saya Muhammad Wisnu Ainun Najib, seorang profesional IT dan lulusan Sarjana Terapan (S.Tr.T) Teknologi Rekayasa Komputer dari Politeknik Negeri Semarang. Perjalanan saya di dunia teknologi didorong oleh ketertarikan yang kuat terhadap bagaimana solusi digital dapat memecahkan masalah di dunia nyata. Dengan fondasi keilmuan teknik yang kuat, saya memiliki fokus mendalam pada pengembangan perangkat lunak (software development), pemeliharaan sistem, serta perancangan aplikasi yang berpusat pada pengguna (user-centered).",
+    "p2": "Saat ini, saya sedang mengembangkan keahlian teknis saya di AirNav Indonesia sebagai bagian dari tim IT Development & Operations. Dalam peran ini, saya bertanggung jawab penuh membangun aplikasi web modern berskala besar. Beberapa di antaranya adalah platform Helpdesk menggunakan Nuxt.js dan sistem manajemen acara (AirNav Event) menggunakan Vue.js. Saya sangat menikmati tantangan dalam membangun fitur dinamis, seperti merancang sistem chat real-time berlatensi rendah menggunakan WebSockets, serta mengintegrasikan REST API yang kompleks dengan sistem autentikasi RBAC.",
+    "p3": "Di luar pengembangan web modern, saya adalah seorang engineer yang adaptif dan suka mengeksplorasi berbagai teknologi baru. Pengalaman saya mencakup pengembangan FishFresh, sebuah aplikasi mobile berbasis Kecerdasan Buatan (Computer Vision) untuk deteksi objek secara real-time, hingga pengalaman terjun langsung dalam pemeliharaan infrastruktur IT saat magang di Jasa Marga (JMTO). Didukung dengan kemampuan komunikasi dan kerja sama tim yang baik, saya selalu antusias untuk berkontribusi dalam proyek-proyek inovatif yang menantang dan mampu memberikan dampak positif bagi perusahaan."
+  },
   "internship": {
     "title": "PENGALAMAN KERJA",
     "position": "Posisi:",
     "duration": "Durasi:",
+    "responsibilities": "Tanggung Jawab Utama & Pencapaian:",
+    "experience": "Pengalaman",
+    "back_to_home": "Kembali ke Beranda",
     "job1": {
       "company": "AirNav Indonesia",
-      "position": "IT Development",
-      "duration": "Okt 2025 - Sekarang",
-      "desc1": "Mengembangkan alur autentikasi dari UI ke integrasi API Back-End, termasuk penanganan error.",
-      "desc2": "Membangun komponen UI yang dapat digunakan kembali dan mengimplementasikan desain responsif penuh untuk aplikasi manajemen acara (Navevent).",
-      "desc3": "Melakukan proses debug dan pemeliharaan pasca-deployment, termasuk memperbaiki bug sinkronisasi data (state management) antara tampilan dan database."
+      "position": "IT Development - Enterprise Technology Planning & It Operations",
+      "duration": "Oktober 2025 - Sekarang",
+      "desc1": "Mengembangkan 2 aplikasi web: membangun platform Helpdesk menggunakan Nuxt.js dan AirNav Event menggunakan Vue.js, membuat 15+ komponen yang dapat digunakan ulang untuk mempercepat waktu pengembangan hingga 30%.",
+      "desc2": "Merancang Sistem Chat real-time untuk Helpdesk menggunakan WebSockets, memungkinkan pengiriman pesan instan antara Admin dan Pelapor dengan jeda waktu sangat rendah.",
+      "desc2_short": "Merancang Sistem Chat real-time untuk Helpdesk menggunakan WebSockets, memungkinkan pengiriman pesan instan antara Admin dan Pelapor...",
+      "desc3": "Mengintegrasikan 20+ endpoint REST API, mengelola logika kompleks untuk Autentikasi RBAC dan pemfilteran data hierarkis di kedua platform.",
+      "desc4": "Menyelesaikan 2 proyek skala penuh dengan kecocokan tingkat desain 100%, berhasil menerjemahkan prototipe Figma menjadi kode fungsional penuh dalam waktu magang 3 bulan."
     },
     "job2": {
-      "company": "PT. Jasamarga Tollroad Operator Ruas Semarang Demak",
-      "position": "IT Support",
+      "company": "PT. Jasamarga Tollroad Operator (JMTO), Seksi Semarang - Demak",
+      "position": "IT Support - Layanan Transaksi, Lalu Lintas, dan Pemeliharaan",
       "duration": "Sept 2024 – Jan 2025",
       "desc1": "Merekam laporan AVC bulanan sebagai bagian pantauan operasional, merekap dan melaporkan arus lalu lintas harian pada gerbang tol masuk dan keluar beserta matriks dan tarifnya.",
       "desc2": "Mengunggah laporan kejadian kendaraan via web Jasa Marga Tollroad Operator, membuat surat serah terima alat fungsi layanan jalan dan medis, serta membuat poster himbauan atau peringatan jalan tol.",

@@ -82,19 +82,21 @@
         <div class="p-4">
           <!-- Header -->
           <div class="flex justify-between items-start mb-3">
-            <div class="flex gap-3">
+            <div class="flex gap-3 items-center">
               <img
                 src="/image/Profil.jpg"
                 alt="Profile"
                 class="h-12 w-12 rounded-full object-cover"
               />
-              <div>
+              <div class="flex flex-col justify-center">
                 <h3
-                  class="font-semibold text-[14px] text-gray-900 dark:text-gray-100 leading-tight"
+                  class="font-bold text-[16px] text-slate-800 dark:text-gray-100 leading-none mb-1 tracking-tight"
                 >
                   Muhammad Wisnu Ainun Najib
                 </h3>
-                <p class="text-[12px] text-gray-500 dark:text-gray-400">
+                <p
+                  class="text-[13px] text-gray-500 dark:text-gray-400 font-medium leading-none"
+                >
                   IT Developer
                 </p>
               </div>
@@ -111,39 +113,14 @@
             <h4
               class="text-[16px] font-bold text-gray-900 dark:text-white mb-1"
             >
-              Halo, {{ guestName }}!💻
+              {{ $t("home.welcome_greeting", { name: guestName }) }}
             </h4>
             <p
               class="text-[14px] text-gray-800 dark:text-gray-300 leading-relaxed"
             >
-              Selamat datang di Website portofolio saya. Di sini, saya merangkum
-              diri saya dari berbagai hal tentang saya !
+              {{ $t("home.welcome_message") }}
             </p>
           </div>
-        </div>
-
-        <!-- Actions -->
-        <div
-          class="border-t border-gray-200 dark:border-gray-700 p-2 flex justify-center px-4"
-        >
-          <button
-            @click="likedWelcome = !likedWelcome"
-            :class="[
-              'flex items-center gap-2 px-4 py-2 rounded-md transition text-sm font-semibold flex-1 justify-center max-w-[200px]',
-              likedWelcome
-                ? 'text-blue-600 bg-blue-50 dark:bg-blue-900/20 dark:text-blue-400'
-                : 'text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-white/10',
-            ]"
-          >
-            <i
-              :class="
-                likedWelcome
-                  ? 'fas fa-thumbs-up text-lg'
-                  : 'far fa-thumbs-up text-lg'
-              "
-            ></i>
-            {{ likedWelcome ? "Dimengerti" : "Mengerti" }}
-          </button>
         </div>
       </div>
 
@@ -154,20 +131,22 @@
         <div class="p-4">
           <!-- Header -->
           <div class="flex justify-between items-start mb-3">
-            <div class="flex gap-3">
+            <div class="flex gap-3 items-center">
               <img
                 src="/image/Profil.jpg"
                 alt="Profile"
                 class="h-12 w-12 rounded-full object-cover"
               />
-              <div>
+              <div class="flex flex-col justify-center">
                 <h3
-                  class="font-semibold text-[14px] text-gray-900 dark:text-gray-100 leading-tight"
+                  class="font-bold text-[16px] text-slate-800 dark:text-gray-100 leading-none mb-1 tracking-tight"
                 >
                   Muhammad Wisnu Ainun Najib
                 </h3>
-                <p class="text-[12px] text-gray-500 dark:text-gray-400">
-                  IT Development
+                <p
+                  class="text-[13px] text-gray-500 dark:text-gray-400 font-medium leading-none"
+                >
+                  IT Developer
                 </p>
               </div>
             </div>
@@ -181,51 +160,21 @@
           <div
             class="mb-3 text-blue-700 dark:text-blue-400 text-sm font-semibold flex items-center gap-2"
           >
-            <i class="fas fa-thumbtack"></i> Pinned Introduction
+            <i class="fas fa-thumbtack"></i> {{ $t("home.pinned_title") }}
           </div>
 
           <!-- Content -->
           <div
-            class="text-[14px] text-gray-900 dark:text-gray-200 leading-relaxed mb-4 whitespace-pre-line"
+            class="text-[14px] text-gray-900 dark:text-gray-200 leading-relaxed mb-4"
           >
-            Hello! I'm Muhammad Wisnu Ainun Najib, a passionate Web Developer
-            and IT professional based in Semarang, Jawa Tengah. With a strong
-            foundation in modern web technologies and a keen eye for
-            user-centered design, I specialize in building responsive, scalable,
-            and performant web applications. My expertise spans across frontend
-            development with React, backend systems with Node.js, and database
-            management with SQL. I'm committed to continuous learning and
-            staying updated with the latest industry trends to deliver
-            innovative solutions that drive business value. I thrive in
-            collaborative environments and enjoy tackling complex challenges
-            that push the boundaries of web development. Whether it's crafting
-            intuitive user interfaces or optimizing application performance, I
-            bring dedication and technical excellence to every project.
+            {{ $t("home.pinned_content") }}
+            <NuxtLink
+              :to="localePath('/about')"
+              class="font-bold text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 hover:underline whitespace-nowrap"
+            >
+              {{ $t("home.show_more") }}
+            </NuxtLink>
           </div>
-        </div>
-
-        <!-- Actions -->
-        <div
-          class="border-t border-gray-200 dark:border-gray-700 p-2 flex justify-center px-4"
-        >
-          <button
-            @click="likedPinned = !likedPinned"
-            :class="[
-              'flex items-center gap-2 px-4 py-2 rounded-md transition text-sm font-semibold flex-1 justify-center max-w-[200px]',
-              likedPinned
-                ? 'text-blue-600 bg-blue-50 dark:bg-blue-900/20 dark:text-blue-400'
-                : 'text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-white/10',
-            ]"
-          >
-            <i
-              :class="
-                likedPinned
-                  ? 'fas fa-thumbs-up text-lg'
-                  : 'far fa-thumbs-up text-lg'
-              "
-            ></i>
-            Like
-          </button>
         </div>
       </div>
 
@@ -236,20 +185,22 @@
         <div class="p-4">
           <!-- Header -->
           <div class="flex justify-between items-start mb-3">
-            <div class="flex gap-3">
+            <div class="flex gap-3 items-center">
               <img
                 src="/image/Profil.jpg"
                 alt="Profile"
                 class="h-12 w-12 rounded-full object-cover"
               />
-              <div>
+              <div class="flex flex-col justify-center">
                 <h3
-                  class="font-semibold text-[14px] text-gray-900 dark:text-gray-100 leading-tight"
+                  class="font-bold text-[16px] text-slate-800 dark:text-gray-100 leading-none mb-1 tracking-tight"
                 >
                   Muhammad Wisnu Ainun Najib
                 </h3>
-                <p class="text-[14px] text-gray-800 dark:text-gray-300">
-                  IT Development
+                <p
+                  class="text-[13px] text-gray-500 dark:text-gray-400 font-medium leading-none"
+                >
+                  IT Developer
                 </p>
               </div>
             </div>
@@ -277,13 +228,13 @@
               <h4
                 class="font-bold text-[16px] text-gray-900 dark:text-gray-100"
               >
-                IT Development
+                {{ $t("internship.job1.position") }}
               </h4>
               <p class="text-[14px] text-gray-800 dark:text-gray-300">
-                AirNav Indonesia
+                {{ $t("internship.job1.company") }}
               </p>
               <p class="text-[12px] text-gray-500 dark:text-gray-400 mt-1">
-                Jan 2025 - Present • 2 mos
+                {{ $t("internship.job1.duration") }}
               </p>
               <p class="text-[12px] text-gray-500 dark:text-gray-400">
                 Semarang, Jawa Tengah, Indonesia
@@ -295,70 +246,29 @@
           <div
             class="text-[14px] text-gray-900 dark:text-gray-200 leading-relaxed mb-4"
           >
-            <p class="mb-2">
-              <strong>Key Responsibilities & Achievements:</strong>
-            </p>
-            <ul class="list-disc pl-5 space-y-2">
+            <div class="mb-3">
+              <span
+                class="font-semibold text-gray-800 dark:text-gray-100 bg-gray-100 dark:bg-gray-800/50 px-2 py-1 rounded"
+                >{{ $t("internship.responsibilities") }}</span
+              >
+            </div>
+            <ul
+              class="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300"
+            >
               <li>
-                Developed and maintained responsive web applications using
-                React.js and Tailwind CSS, improving user engagement by 35%
+                {{ $t("internship.job1.desc1") }}
               </li>
               <li>
-                Collaborated with cross-functional teams to implement new
-                features and optimize existing codebase
-              </li>
-              <li>
-                Participated in code reviews and contributed to establishing
-                best practices for frontend development
-              </li>
-              <li>
-                Integrated RESTful APIs and managed state with Redux, enhancing
-                application performance and scalability
+                {{ $t("internship.job1.desc2_short") }}
+                <NuxtLink
+                  :to="localePath('/internship')"
+                  class="font-semibold text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 hover:underline transition-colors"
+                >
+                  {{ $t("home.show_more") }}
+                </NuxtLink>
               </li>
             </ul>
           </div>
-        </div>
-
-        <!-- Stats -->
-        <div
-          class="px-4 py-2 flex justify-between items-center text-gray-500 dark:text-gray-400 text-[12px] border-t border-gray-100 dark:border-gray-800"
-        >
-          <div class="flex items-center gap-1">
-            <span
-              class="bg-blue-600 text-white rounded-full w-4 h-4 flex items-center justify-center text-[10px]"
-              ><i class="fas fa-thumbs-up"></i
-            ></span>
-            <span
-              class="bg-red-500 text-white rounded-full w-4 h-4 flex items-center justify-center text-[10px] -ml-1"
-              ><i class="fas fa-heart"></i
-            ></span>
-            <span class="ml-1 text-[13px]">127</span>
-          </div>
-          <div>24 comments</div>
-        </div>
-
-        <!-- Actions -->
-        <div
-          class="border-t border-gray-200 dark:border-gray-700 p-2 flex justify-center px-4"
-        >
-          <button
-            @click="likedInternship = !likedInternship"
-            :class="[
-              'flex items-center gap-2 px-4 py-2 rounded-md transition text-sm font-semibold flex-1 justify-center max-w-[200px]',
-              likedInternship
-                ? 'text-blue-600 bg-blue-50 dark:bg-blue-900/20 dark:text-blue-400'
-                : 'text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-white/10',
-            ]"
-          >
-            <i
-              :class="
-                likedInternship
-                  ? 'fas fa-thumbs-up text-lg'
-                  : 'far fa-thumbs-up text-lg'
-              "
-            ></i>
-            Like
-          </button>
         </div>
       </div>
 
@@ -368,20 +278,22 @@
       >
         <div class="p-4">
           <div class="flex justify-between items-start mb-3">
-            <div class="flex gap-3">
+            <div class="flex gap-3 items-center">
               <img
                 src="/image/Profil.jpg"
                 alt="Profile"
                 class="h-12 w-12 rounded-full object-cover"
               />
-              <div>
+              <div class="flex flex-col justify-center">
                 <h3
-                  class="font-semibold text-[14px] text-gray-900 dark:text-gray-100 leading-tight"
+                  class="font-bold text-[16px] text-slate-800 dark:text-gray-100 leading-none mb-1 tracking-tight"
                 >
                   Muhammad Wisnu Ainun Najib
                 </h3>
-                <p class="text-[14px] text-gray-800 dark:text-gray-300">
-                  IT Development
+                <p
+                  class="text-[13px] text-gray-500 dark:text-gray-400 font-medium leading-none"
+                >
+                  IT Developer
                 </p>
               </div>
             </div>
@@ -482,20 +394,22 @@
       >
         <div class="p-4">
           <div class="flex justify-between items-start mb-3">
-            <div class="flex gap-3">
+            <div class="flex gap-3 items-center">
               <img
                 src="/image/Profil.jpg"
                 alt="Profile"
                 class="h-12 w-12 rounded-full object-cover"
               />
-              <div>
+              <div class="flex flex-col justify-center">
                 <h3
-                  class="font-semibold text-[14px] text-gray-900 dark:text-gray-100 leading-tight"
+                  class="font-bold text-[16px] text-slate-800 dark:text-gray-100 leading-none mb-1 tracking-tight"
                 >
                   Muhammad Wisnu Ainun Najib
                 </h3>
-                <p class="text-[14px] text-gray-800 dark:text-gray-300">
-                  IT Development
+                <p
+                  class="text-[13px] text-gray-500 dark:text-gray-400 font-medium leading-none"
+                >
+                  IT Developer
                 </p>
               </div>
             </div>
@@ -578,10 +492,11 @@
 
 <script setup>
 import { ref, onMounted } from "vue";
-import { useState } from "#imports";
+import { useState, useLocalePath } from "#imports";
 
 const isLoading = ref(true);
 const guestName = useState("guestName", () => "");
+const localePath = useLocalePath();
 
 const likedWelcome = ref(false);
 const likedPinned = ref(false);
