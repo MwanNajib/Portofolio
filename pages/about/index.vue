@@ -77,7 +77,7 @@
             </div>
             <div class="clear-both">
               <img
-                src="/image/jasamarga.jpeg"
+                src="/image/Jasamarga.jpeg"
                 alt="At Jasa Marga (JMTO)"
                 class="float-left w-1/3 md:w-1/4 rounded-lg shadow-md mr-4 mb-2 object-cover border border-gray-200 dark:border-gray-700"
               />
