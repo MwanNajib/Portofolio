@@ -296,10 +296,13 @@ const sendMessage = async () => {
   } catch (error) {
     modalType.value = "error";
     modalTitle.value = "Gagal Mengirim";
+    // Menampilkan pesan error asli dari backend untuk debugging Vercel
     modalMessage.value =
-      "Maaf, terjadi kesalahan saat mencoba mengirim pesan Anda. Silakan coba beberapa saat lagi.";
+      error.data?.statusMessage ||
+      error.message ||
+      "Maaf, terjadi kesalahan tak terduga saat mencoba mengirim pesan Anda.";
     showModal.value = true;
-    console.error(error);
+    console.error("Detail Error:", error);
   } finally {
     isSending.value = false;
   }
