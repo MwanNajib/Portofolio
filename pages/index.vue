@@ -307,84 +307,42 @@
           <div
             class="text-[14px] text-gray-900 dark:text-gray-200 leading-relaxed mb-4"
           >
-            Happy to share one of my recent full-stack projects! It's a
-            comprehensive web application built with modern technologies to
-            solve real-world problems. Check out the details below! 🚀💻
+            {{ $t("home.project_post_desc") }}
+            <NuxtLink
+              :to="localePath('/portfolio')"
+              class="font-semibold text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 hover:underline transition-colors"
+            >
+              {{ $t("home.show_more") }}
+            </NuxtLink>
           </div>
 
           <div
             class="bg-[#f8fafd] dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-md overflow-hidden mb-4"
           >
-            <div
-              class="h-40 bg-gray-200 dark:bg-gray-700 flex items-center justify-center"
-            >
-              <i class="fas fa-laptop-code text-4xl text-gray-400"></i>
+            <div class="h-48 w-full overflow-hidden">
+              <img
+                src="/image/portofolio1.jpg"
+                alt="NavEvent Portfolio"
+                class="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+              />
             </div>
             <div class="p-4">
               <h4
                 class="font-bold text-[16px] text-gray-900 dark:text-gray-100"
               >
-                E-Commerce Dashboard Analytics
+                NavEvent (AirNav Event)
               </h4>
               <p class="text-[14px] text-gray-600 dark:text-gray-400 mt-1">
-                A real-time analytics dashboard for e-commerce platforms
-                featuring interactive charts and data visualization.
+                {{ $t("home.project_post_nav_desc") }}
               </p>
               <div class="flex flex-wrap gap-2 mt-3">
                 <span
                   class="bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 text-xs px-2 py-1 rounded-full"
-                  >Vue.js</span
-                >
-                <span
-                  class="bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 text-xs px-2 py-1 rounded-full"
-                  >Node.js</span
-                >
-                <span
-                  class="bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 text-xs px-2 py-1 rounded-full"
-                  >TailwindCSS</span
+                  >React.js</span
                 >
               </div>
             </div>
           </div>
-        </div>
-
-        <div
-          class="px-4 py-2 flex justify-between items-center text-gray-500 dark:text-gray-400 text-[12px] border-t border-gray-100 dark:border-gray-800"
-        >
-          <div class="flex items-center gap-1">
-            <span
-              class="bg-blue-600 text-white rounded-full w-4 h-4 flex items-center justify-center text-[10px]"
-              ><i class="fas fa-thumbs-up"></i
-            ></span>
-            <span
-              class="bg-red-500 text-white rounded-full w-4 h-4 flex items-center justify-center text-[10px] -ml-1"
-              ><i class="fas fa-heart"></i
-            ></span>
-            <span class="ml-1 text-[13px]">85</span>
-          </div>
-        </div>
-
-        <div
-          class="border-t border-gray-200 dark:border-gray-700 p-2 flex justify-center px-4"
-        >
-          <button
-            @click="likedProject = !likedProject"
-            :class="[
-              'flex items-center gap-2 px-4 py-2 rounded-md transition text-sm font-semibold flex-1 justify-center max-w-[200px]',
-              likedProject
-                ? 'text-blue-600 bg-blue-50 dark:bg-blue-900/20 dark:text-blue-400'
-                : 'text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-white/10',
-            ]"
-          >
-            <i
-              :class="
-                likedProject
-                  ? 'fas fa-thumbs-up text-lg'
-                  : 'far fa-thumbs-up text-lg'
-              "
-            ></i>
-            Like
-          </button>
         </div>
       </div>
 
@@ -409,7 +367,7 @@
                 <p
                   class="text-[13px] text-gray-500 dark:text-gray-400 font-medium leading-none"
                 >
-                  IT Developer
+                  {{ $t("home.it_developer") }}
                 </p>
               </div>
             </div>
@@ -423,13 +381,12 @@
           <div
             class="text-[14px] text-gray-900 dark:text-gray-200 leading-relaxed mb-4"
           >
-            Let's connect! I'm always open to discussing web development, tech
-            innovations, and exciting collaboration opportunities. Feel free to
-            reach out to me! 🤝✉️
+            {{ $t("home.contact_post_desc") }}
           </div>
 
-          <div
-            class="bg-blue-50 dark:bg-blue-900/20 border border-blue-100 dark:border-blue-800 rounded-md p-4 mb-4 flex gap-4 items-center"
+          <a
+            href="mailto:muhammadwisnuainunnajib@gmail.com"
+            class="bg-blue-50 dark:bg-blue-900/20 border border-blue-100 dark:border-blue-800 rounded-md p-4 mb-4 flex gap-4 items-center hover:bg-blue-100 dark:hover:bg-blue-900/40 transition-colors cursor-pointer"
           >
             <div
               class="w-12 h-12 bg-blue-100 dark:bg-blue-800 flex-shrink-0 flex items-center justify-center rounded-full"
@@ -442,48 +399,13 @@
               <h4
                 class="font-bold text-[16px] text-gray-900 dark:text-gray-100"
               >
-                Contact Me
+                {{ $t("contact.title") }}
               </h4>
               <p class="text-[14px] text-gray-600 dark:text-gray-400 mt-1">
                 muhammadwisnuainunnajib@gmail.com
               </p>
             </div>
-          </div>
-        </div>
-
-        <div
-          class="px-4 py-2 flex justify-between items-center text-gray-500 dark:text-gray-400 text-[12px] border-t border-gray-100 dark:border-gray-800"
-        >
-          <div class="flex items-center gap-1">
-            <span
-              class="bg-blue-600 text-white rounded-full w-4 h-4 flex items-center justify-center text-[10px]"
-              ><i class="fas fa-thumbs-up"></i
-            ></span>
-            <span class="ml-1 text-[13px]">42</span>
-          </div>
-        </div>
-
-        <div
-          class="border-t border-gray-200 dark:border-gray-700 p-2 flex justify-center px-4"
-        >
-          <button
-            @click="likedContact = !likedContact"
-            :class="[
-              'flex items-center gap-2 px-4 py-2 rounded-md transition text-sm font-semibold flex-1 justify-center max-w-[200px]',
-              likedContact
-                ? 'text-blue-600 bg-blue-50 dark:bg-blue-900/20 dark:text-blue-400'
-                : 'text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-white/10',
-            ]"
-          >
-            <i
-              :class="
-                likedContact
-                  ? 'fas fa-thumbs-up text-lg'
-                  : 'far fa-thumbs-up text-lg'
-              "
-            ></i>
-            Like
-          </button>
+          </a>
         </div>
       </div>
     </template>

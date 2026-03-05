@@ -168,7 +168,7 @@
         </div>
 
         <!-- Core Skills & Tools -->
-        <div
+        <!-- <div
           class="bg-white dark:bg-[#1d2226] rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-4 transition-colors"
         >
           <h2
@@ -176,45 +176,95 @@
           >
             {{ $t("sidebar.skills_tools") }}
           </h2>
-          <div class="flex flex-wrap gap-2">
+          <div class="flex flex-wrap gap-2.5 mt-1">
             <span
-              class="bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 text-[12px] px-2.5 py-1 rounded-full font-medium"
-              >HTML5</span
+              class="group flex items-center gap-1.5 bg-gray-50 dark:bg-[#22282d] hover:bg-white dark:hover:bg-[#2a3036] border border-gray-200 dark:border-gray-700 hover:border-orange-300 dark:hover:border-orange-500/50 text-gray-700 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400 text-[12px] px-3 py-1.5 rounded-lg font-medium transition-all shadow-sm hover:shadow cursor-default"
             >
+              <i
+                class="fab fa-html5 text-orange-500 group-hover:scale-110 transition-transform"
+              ></i>
+              HTML5
+            </span>
             <span
-              class="bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 text-[12px] px-2.5 py-1 rounded-full font-medium"
-              >CSS3</span
+              class="group flex items-center gap-1.5 bg-gray-50 dark:bg-[#22282d] hover:bg-white dark:hover:bg-[#2a3036] border border-gray-200 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-500/50 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 text-[12px] px-3 py-1.5 rounded-lg font-medium transition-all shadow-sm hover:shadow cursor-default"
             >
+              <i
+                class="fab fa-css3-alt text-blue-500 group-hover:scale-110 transition-transform"
+              ></i>
+              CSS3
+            </span>
             <span
-              class="bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 text-[12px] px-2.5 py-1 rounded-full font-medium"
-              >JavaScript</span
+              class="group flex items-center gap-1.5 bg-gray-50 dark:bg-[#22282d] hover:bg-white dark:hover:bg-[#2a3036] border border-gray-200 dark:border-gray-700 hover:border-yellow-300 dark:hover:border-yellow-500/50 text-gray-700 dark:text-gray-300 hover:text-yellow-600 dark:hover:text-yellow-500 text-[12px] px-3 py-1.5 rounded-lg font-medium transition-all shadow-sm hover:shadow cursor-default"
             >
+              <i
+                class="fab fa-js text-yellow-500 group-hover:scale-110 transition-transform"
+              ></i>
+              JavaScript
+            </span>
             <span
-              class="bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 text-[12px] px-2.5 py-1 rounded-full font-medium"
-              >TypeScript</span
+              class="group flex items-center gap-1.5 bg-gray-50 dark:bg-[#22282d] hover:bg-white dark:hover:bg-[#2a3036] border border-gray-200 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-500/50 text-gray-700 dark:text-gray-300 hover:text-[#3178C6] dark:hover:text-[#3178C6] text-[12px] px-3 py-1.5 rounded-lg font-medium transition-all shadow-sm hover:shadow cursor-default"
             >
+              <i
+                class="fas fa-code text-[#3178C6] group-hover:scale-110 transition-transform"
+              ></i>
+              TypeScript
+            </span>
             <span
-              class="bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 text-[12px] px-2.5 py-1 rounded-full font-medium"
-              >Vue.js</span
+              class="group flex items-center gap-1.5 bg-gray-50 dark:bg-[#22282d] hover:bg-white dark:hover:bg-[#2a3036] border border-gray-200 dark:border-gray-700 hover:border-green-300 dark:hover:border-green-500/50 text-gray-700 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-500 text-[12px] px-3 py-1.5 rounded-lg font-medium transition-all shadow-sm hover:shadow cursor-default"
             >
+              <i
+                class="fab fa-vuejs text-green-500 group-hover:scale-110 transition-transform"
+              ></i>
+              Vue.js
+            </span>
             <span
-              class="bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 text-[12px] px-2.5 py-1 rounded-full font-medium"
-              >Nuxt 3</span
+              class="group flex items-center gap-1.5 bg-gray-50 dark:bg-[#22282d] hover:bg-white dark:hover:bg-[#2a3036] border border-gray-200 dark:border-gray-700 hover:border-green-300 dark:hover:border-green-500/50 text-gray-700 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-500 text-[12px] px-3 py-1.5 rounded-lg font-medium transition-all shadow-sm hover:shadow cursor-default"
             >
+              <i
+                class="fas fa-mountain text-green-600 group-hover:scale-110 transition-transform"
+              ></i>
+              Nuxt 3
+            </span>
             <span
-              class="bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 text-[12px] px-2.5 py-1 rounded-full font-medium"
-              >Tailwind CSS</span
+              class="group flex items-center gap-1.5 bg-gray-50 dark:bg-[#22282d] hover:bg-white dark:hover:bg-[#2a3036] border border-gray-200 dark:border-gray-700 hover:border-cyan-300 dark:hover:border-cyan-500/50 text-gray-700 dark:text-gray-300 hover:text-cyan-600 dark:hover:text-cyan-400 text-[12px] px-3 py-1.5 rounded-lg font-medium transition-all shadow-sm hover:shadow cursor-default"
             >
+              <i
+                class="fas fa-wind text-cyan-500 group-hover:scale-110 transition-transform"
+              ></i>
+              Tailwind CSS
+            </span>
             <span
-              class="bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 text-[12px] px-2.5 py-1 rounded-full font-medium"
-              >Git</span
+              class="group flex items-center gap-1.5 bg-gray-50 dark:bg-[#22282d] hover:bg-white dark:hover:bg-[#2a3036] border border-gray-200 dark:border-gray-700 hover:border-red-300 dark:hover:border-red-500/50 text-gray-700 dark:text-gray-300 hover:text-red-600 dark:hover:text-red-500 text-[12px] px-3 py-1.5 rounded-lg font-medium transition-all shadow-sm hover:shadow cursor-default"
             >
+              <i
+                class="fab fa-git-alt text-red-500 group-hover:scale-110 transition-transform"
+              ></i>
+              Git
+            </span>
             <span
-              class="bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 text-[12px] px-2.5 py-1 rounded-full font-medium"
-              >SQL</span
+              class="group flex items-center gap-1.5 bg-gray-50 dark:bg-[#22282d] hover:bg-white dark:hover:bg-[#2a3036] border border-gray-200 dark:border-gray-700 hover:border-indigo-300 dark:hover:border-indigo-500/50 text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 text-[12px] px-3 py-1.5 rounded-lg font-medium transition-all shadow-sm hover:shadow cursor-default"
             >
+              <i
+                class="fas fa-database text-indigo-500 group-hover:scale-110 transition-transform"
+              ></i>
+              SQL
+            </span>
+            <span
+              class="group flex items-center gap-1.5 bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 hover:from-purple-100 hover:to-pink-100 dark:hover:from-purple-900/40 dark:hover:to-pink-900/40 border border-purple-200 dark:border-purple-800 text-gray-800 dark:text-gray-200 text-[12px] px-3 py-1.5 rounded-lg font-bold transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5 cursor-default relative overflow-hidden"
+            >
+              <span
+                class="absolute inset-0 w-full h-full bg-gradient-to-tr from-transparent via-white/40 to-transparent group-hover:translate-x-full transition-transform duration-700 ease-in-out -translate-x-full z-0"
+              ></span>
+              <i
+                class="fas fa-space-shuttle text-purple-600 dark:text-purple-400 group-hover:scale-125 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:-rotate-12 transition-all duration-300 z-10 relative relative z-10"
+              ></i>
+              <span
+                class="bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-600 dark:from-purple-400 dark:to-pink-400 z-10 relative"
+                >Antigravity</span
+              >
+            </span>
           </div>
-        </div>
+        </div> -->
       </aside>
     </main>
 
@@ -229,7 +279,6 @@
         >
       </div>
     </footer>
-
     <div
       v-if="showWelcomeModal"
       class="fixed inset-0 z-[100] flex items-center justify-center p-4"

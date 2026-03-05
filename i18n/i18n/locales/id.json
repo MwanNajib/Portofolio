@@ -15,7 +15,11 @@
     "welcome_message": "Selamat datang di Website portofolio saya. Di sini, saya merangkum diri saya dari berbagai hal tentang saya !",
     "pinned_title": "Pinned Introduction",
     "pinned_content": "Halo! Saya Muhammad Wisnu Ainun Najib, seorang profesional IT dan lulusan Sarjana Terapan (S.Tr.T) Teknologi Rekayasa Komputer dari Politeknik Negeri Semarang. Perjalanan saya di dunia teknologi didorong oleh ketertarikan yang kuat terhadap bagaimana solusi digital dapat memecahkan masalah di dunia nyata...",
-    "show_more": "show more"
+    "show_more": "show more",
+    "project_post_desc": "Proyek full-stack terbaru yang dibangun untuk memecahkan masalah di dunia nyata. Dirancang untuk skalabilitas, performa, dan pengalaman pengguna yang mulus. Jelajahi detail teknisnya di bawah ini!! 🚀💻....",
+    "project_post_nav_desc": "Sistem manajemen acara cerdas dan terintegrasi yang memiliki antarmuka intuitif untuk penjadwalan mulus dan koordinasi acara yang mudah.",
+    "it_developer": "Pengembang IT",
+    "contact_post_desc": "Mari terhubung! Saya selalu terbuka untuk mendiskusikan pengembangan web, inovasi teknologi, dan peluang kolaborasi yang menarik. Jangan ragu untuk menghubungi saya! 🤝✉️"
   },
   "profile": {
     "name": "Muhammad Wisnu Ainun Najib",
@@ -75,6 +79,14 @@
   "portfolio": {
     "title": "Portofolio",
     "detail": "Lihat Detail \u2192",
+    "pageSubtitle": "Proyek Portofolio",
+    "github": "Kode GitHub",
+    "category1": "Manajemen Acara",
+    "category2": "Sistem Dukungan IT",
+    "category3": "Visi Komputer",
+    "navEventDesc": "NavEvent adalah sistem pintar dan terintegrasi yang dirancang untuk memastikan efisiensi, ketepatan, dan profesionalisme di setiap acara. Dengan teknologi canggih dan antarmuka yang intuitif, sistem ini memudahkan penjadwalan, pengelolaan peserta, serta pemantauan progres acara.",
+    "helpdeskDesc": "Sistem manajemen dukungan internal berskala enterprise yang dibangun untuk mempercepat waktu respons tim IT. Dengan antarmuka yang intuitif dan integrasi komunikasi real-time, sistem ini menyederhanakan alur kerja dari pelaporan masalah hingga penyelesaian akhir tanpa hambatan.",
+    "fishfreshDesc": "Aplikasi mobile yang berfungsi sebagai solusi untuk klasifikasi kesegaran ikan bandeng secara otomatis dan real-time. Memanfaatkan kecerdasan buatan berbasis Computer Vision dengan model YOLOv8 untuk akurasi tinggi.",
     "proj1": {
       "title": "Proyek NavEvent",
       "desc": "Platform web untuk penemuan, pendaftaran, dan manajemen acara."

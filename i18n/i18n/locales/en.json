@@ -15,7 +15,11 @@
     "welcome_message": "Welcome to my portfolio website. Here, I summarize various things about myself!",
     "pinned_title": "Pinned Introduction",
     "pinned_content": "Hello! I am Muhammad Wisnu Ainun Najib, a passionate IT professional and a recent graduate with a Bachelor of Applied Science (S.Tr.T) in Computer Engineering Technology from Politeknik Negeri Semarang. My journey in the tech industry has been driven by a strong fascination with how digital solutions can solve real-world problems...",
-    "show_more": "show more"
+    "show_more": "show more",
+    "project_post_desc": "A recent full-stack project built to solve real-world problems. Engineered for scalability, performance, and seamless user experience. Explore the technical details below!! 🚀💻....",
+    "project_post_nav_desc": "A smart, integrated event management system featuring an intuitive interface for seamless scheduling and effortless event coordination.",
+    "it_developer": "IT Developer",
+    "contact_post_desc": "Let's connect! I'm always open to discussing web development, tech innovations, and exciting collaboration opportunities. Feel free to reach out to me! 🤝✉️"
   },
   "profile": {
     "name": "Muhammad Wisnu Ainun Najib",
@@ -75,6 +79,14 @@
   "portfolio": {
     "title": "Portfolio",
     "detail": "View Details \u2192",
+    "pageSubtitle": "Portfolio Projects",
+    "github": "GitHub",
+    "category1": "Event Management",
+    "category2": "IT Support System",
+    "category3": "Computer Vision",
+    "navEventDesc": "NavEvent is a smart and integrated system designed to ensure efficiency, precision, and professionalism in every event. With advanced technology and an intuitive interface, this system facilitates scheduling, participant management, and event progress monitoring.",
+    "helpdeskDesc": "An enterprise-scale internal support management system built to accelerate the IT team's response time. With an intuitive interface and real-time communication integration, this system streamlines the workflow seamlessly from problem reporting to final resolution.",
+    "fishfreshDesc": "A mobile application that functions as a solution for automatic and real-time classification of milkfish freshness. Utilizing Artificial Intelligence based on Computer Vision with the YOLOv8 model for high accuracy.",
     "proj1": {
       "title": "Project NavEvent",
       "desc": "Web platform for event discovery, registration and management."
