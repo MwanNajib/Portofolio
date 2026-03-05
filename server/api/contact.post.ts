@@ -14,12 +14,13 @@ export default defineEventHandler(async (event) => {
     }
 
     // 1. Konfigurasi Transporter Nodemailer untuk Gmail
-    // Anda harus meletakkan 'EMAIL_USER' dan 'EMAIL_PASS' ini di dalam file .env
     const transporter = nodemailer.createTransport({
-      service: "gmail",
+      host: "smtp.gmail.com",
+      port: 465,
+      secure: true, // Gunakan koneksi SSL (Wajib untuk Vercel Serverless)
       auth: {
-        user: process.env.EMAIL_USER, // Contoh: 'muhammadwisnuainunnajib@gmail.com'
-        pass: process.env.EMAIL_PASS, // Sandi Aplikasi (bukan password akun Anda)
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
       },
     });
 
