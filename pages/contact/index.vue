@@ -277,12 +277,24 @@ const sendMessage = async () => {
   isSending.value = true;
 
   try {
-    const response = await $fetch("/api/contact", {
+    // Menggunakan Formspree sebagai alternatif yang jauh lebih lancar dan tanpa backend/env
+    // Berikut URL Formspree Anda:
+    const formspreeEndpoint = "https://formspree.io/f/xpqyaqgz";
+
+    const response = await fetch(formspreeEndpoint, {
       method: "POST",
-      body: formData.value,
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name: formData.value.name,
+        email: formData.value.email,
+        message: formData.value.message,
+      }),
     });
 
-    if (response.success) {
+    if (response.ok) {
       modalType.value = "success";
       modalTitle.value = "Pesan Berhasil Dikirim!";
       modalMessage.value = ""; // Dikosongkan agar lebih ringkas
