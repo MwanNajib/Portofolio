@@ -42,7 +42,7 @@
           data-aos-delay="200"
         >
           <img
-            src="/image/portofolio2.jpg"
+            src="/image/portofolio2.png"
             alt="Project Website Makroni Kapok-Kapok"
             class="w-full h-56 object-cover"
           />
@@ -69,7 +69,7 @@
           data-aos-delay="300"
         >
           <img
-            src="/image/portofolio3.png"
+            src="/image/portofolio3.jpg"
             alt="Project Translator"
             class="w-full h-56 object-cover"
           />
