@@ -5,6 +5,11 @@ export default defineNuxtConfig({
 
   modules: ["@nuxtjs/tailwindcss", "@nuxtjs/google-fonts", "@nuxtjs/i18n"],
 
+  runtimeConfig: {
+    emailUser: process.env.EMAIL_USER,
+    emailPass: process.env.EMAIL_PASS,
+  },
+
   i18n: {
     locales: [
       { code: "en", name: "English", file: "en.json" },

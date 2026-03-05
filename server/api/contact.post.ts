@@ -13,20 +13,22 @@ export default defineEventHandler(async (event) => {
       });
     }
 
+    const config = useRuntimeConfig();
+
     // 1. Konfigurasi Transporter Nodemailer untuk Gmail
     const transporter = nodemailer.createTransport({
       host: "smtp.gmail.com",
       port: 465,
       secure: true, // Gunakan koneksi SSL (Wajib untuk Vercel Serverless)
       auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
+        user: config.emailUser,
+        pass: config.emailPass,
       },
     });
 
     // 2. Format Email yang Akan Diterima
     const mailOptions = {
-      from: `"${name} (Portofolio)" <${process.env.EMAIL_USER}>`,
+      from: `"${name} (Portofolio)" <${config.emailUser}>`,
       to: "muhammadwisnuainunnajib@gmail.com", // Tujuan Email Utama Anda
       replyTo: email, // Jika Anda membalas, maka membalas ke email si pengirim
       subject: `New Message from ${name} via Contact Portfolio`,
