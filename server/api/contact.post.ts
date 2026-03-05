@@ -15,20 +15,33 @@ export default defineEventHandler(async (event) => {
 
     const config = useRuntimeConfig();
 
+    // Fallback baca paksa dari Node.js Vercel runtime
+    const user =
+      process.env.NUXT_EMAIL_USER || process.env.EMAIL_USER || config.emailUser;
+    const pass =
+      process.env.NUXT_EMAIL_PASS || process.env.EMAIL_PASS || config.emailPass;
+
+    if (!user || !pass) {
+      throw createError({
+        statusCode: 500,
+        statusMessage: `Kredensial Vercel Kosong! (user: ${!!user}, pass: ${!!pass}). Mohon set Vercel Environment Variables bernama NUXT_EMAIL_USER dan NUXT_EMAIL_PASS.`,
+      });
+    }
+
     // 1. Konfigurasi Transporter Nodemailer untuk Gmail
     const transporter = nodemailer.createTransport({
       host: "smtp.gmail.com",
       port: 465,
       secure: true, // Gunakan koneksi SSL (Wajib untuk Vercel Serverless)
       auth: {
-        user: config.emailUser,
-        pass: config.emailPass,
+        user: user as string,
+        pass: pass as string,
       },
     });
 
     // 2. Format Email yang Akan Diterima
     const mailOptions = {
-      from: `"${name} (Portofolio)" <${config.emailUser}>`,
+      from: `"${name} (Portofolio)" <${user}>`,
       to: "muhammadwisnuainunnajib@gmail.com", // Tujuan Email Utama Anda
       replyTo: email, // Jika Anda membalas, maka membalas ke email si pengirim
       subject: `New Message from ${name} via Contact Portfolio`,
