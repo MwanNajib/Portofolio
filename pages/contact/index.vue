@@ -145,12 +145,17 @@
             <!-- Submit Button -->
             <button
               type="submit"
-              class="mt-2 group relative w-full flex justify-center items-center gap-2 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold text-[15px] py-3.5 px-6 rounded-xl transition-all shadow-sm hover:shadow-lg hover:-translate-y-0.5 overflow-hidden"
+              :disabled="isSending"
+              class="mt-2 group relative w-full flex justify-center items-center gap-2 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold text-[15px] py-3.5 px-6 rounded-xl transition-all shadow-sm hover:shadow-lg hover:-translate-y-0.5 overflow-hidden disabled:opacity-75 disabled:cursor-wait"
             >
-              <span class="relative z-10">{{ $t("contact.btn") }}</span>
+              <span class="relative z-10">
+                {{ isSending ? "Mengirim..." : $t("contact.btn") }}
+              </span>
               <i
+                v-if="!isSending"
                 class="fas fa-paper-plane relative z-10 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
               ></i>
+              <i v-else class="fas fa-spinner fa-spin relative z-10"></i>
               <!-- Button hover effect overlay -->
               <div
                 class="absolute inset-0 h-full w-full bg-white/20 scale-0 group-hover:scale-100 rounded-xl transition-transform origin-center duration-300"
@@ -159,6 +164,84 @@
           </form>
         </div>
       </div>
+
+      <!-- Custom Success/Error Modal -->
+      <div
+        v-if="showModal"
+        class="fixed inset-0 z-[100] flex items-center justify-center p-4"
+      >
+        <!-- Backdrop -->
+        <div
+          class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm shadow-sm"
+          @click="closeModal"
+        ></div>
+
+        <!-- Modal Content -->
+        <div
+          class="relative w-full max-w-[400px] overflow-hidden rounded-2xl bg-white shadow-2xl animate-in fade-in zoom-in duration-300 dark:bg-[#1b1f23] border border-gray-100 dark:border-gray-800"
+        >
+          <!-- Tidak ada Top Accent Line sesuai permintaan pengguna -->
+
+          <div class="p-8 text-center pt-8">
+            <!-- Icon Background Circle -->
+            <div
+              class="mx-auto flex h-20 w-20 items-center justify-center rounded-full mb-6 relative"
+            >
+              <div
+                :class="[
+                  'absolute inset-0 rounded-full opacity-20',
+                  modalType === 'success' ? 'bg-blue-600' : 'bg-red-600',
+                ]"
+              ></div>
+
+              <!-- Icon Itself -->
+              <div
+                :class="[
+                  'flex h-14 w-14 items-center justify-center rounded-full text-white shadow-lg',
+                  modalType === 'success'
+                    ? 'bg-blue-600 shadow-blue-600/30'
+                    : 'bg-red-600 shadow-red-600/30',
+                ]"
+              >
+                <i
+                  v-if="modalType === 'success'"
+                  class="fas fa-check text-2xl"
+                ></i>
+                <i v-else class="fas fa-exclamation text-xl"></i>
+              </div>
+            </div>
+
+            <h3
+              :class="[
+                'text-2xl font-bold text-gray-900 dark:text-white',
+                modalMessage ? 'mb-2' : 'mb-8',
+              ]"
+            >
+              {{ modalTitle }}
+            </h3>
+            <p
+              v-if="modalMessage"
+              class="mb-8 text-[14px] text-gray-500 dark:text-gray-400 leading-snug"
+            >
+              {{ modalMessage }}
+            </p>
+
+            <!-- Close Button -->
+            <button
+              @click="closeModal"
+              :class="[
+                'w-full rounded-xl py-3.5 px-4 text-[15px] font-bold text-white transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5 focus:outline-none',
+                modalType === 'success'
+                  ? 'bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800'
+                  : 'bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700',
+              ]"
+            >
+              Tutup
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- End Custom Modal -->
     </template>
   </div>
 </template>
@@ -168,7 +251,14 @@ import { ref, onMounted } from "vue";
 import { useLocalePath } from "#imports";
 
 const isLoading = ref(true);
+const isSending = ref(false); // Mode Loading Saat Mengirim Email
 const localePath = useLocalePath();
+
+// Modal States
+const showModal = ref(false);
+const modalType = ref("success"); // 'success' atau 'error'
+const modalTitle = ref("");
+const modalMessage = ref("");
 
 const formData = ref({
   name: "",
@@ -176,23 +266,43 @@ const formData = ref({
   message: "",
 });
 
-const sendMessage = () => {
+const closeModal = () => {
+  showModal.value = false;
+};
+
+const sendMessage = async () => {
   if (!formData.value.name || !formData.value.email || !formData.value.message)
     return;
 
-  const subject = `Message from ${formData.value.name}`;
-  const body = `${formData.value.message}\n\nFrom: ${formData.value.name} (${formData.value.email})`;
+  isSending.value = true;
 
-  const mailtoLink = `mailto:muhammadwisnuainunnajib@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  try {
+    const response = await $fetch("/api/contact", {
+      method: "POST",
+      body: formData.value,
+    });
 
-  window.location.href = mailtoLink;
+    if (response.success) {
+      modalType.value = "success";
+      modalTitle.value = "Pesan Berhasil Dikirim!";
+      modalMessage.value = ""; // Dikosongkan agar lebih ringkas
+      showModal.value = true;
 
-  // Clear form after delay optionally
-  setTimeout(() => {
-    formData.value.name = "";
-    formData.value.email = "";
-    formData.value.message = "";
-  }, 1000);
+      // Bersihkan Form
+      formData.value.name = "";
+      formData.value.email = "";
+      formData.value.message = "";
+    }
+  } catch (error) {
+    modalType.value = "error";
+    modalTitle.value = "Gagal Mengirim";
+    modalMessage.value =
+      "Maaf, terjadi kesalahan saat mencoba mengirim pesan Anda. Silakan coba beberapa saat lagi.";
+    showModal.value = true;
+    console.error(error);
+  } finally {
+    isSending.value = false;
+  }
 };
 
 onMounted(() => {
