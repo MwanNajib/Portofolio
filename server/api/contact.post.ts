@@ -47,11 +47,15 @@ export default defineEventHandler(async (event) => {
     const info = await transporter.sendMail(mailOptions);
 
     return { success: true, message: "Pesan berhasil dikirim!" };
-  } catch (error) {
+  } catch (error: any) {
     console.error("Gagal mengirim email:", error);
+
+    // Kirimkan pesan error aslinya agar tahu spesifik masalah di Vercel
     throw createError({
       statusCode: 500,
-      statusMessage: "Pesan gagal dikirim. Periksa konfigurasi email SMTP.",
+      statusMessage:
+        "Pesan gagal dikirim. Detail: " + (error.message || "Unknown error"),
+      data: error,
     });
   }
 });
