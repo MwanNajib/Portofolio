@@ -128,7 +128,7 @@
                 </span>
                 <span
                   class="text-blue-600 dark:text-blue-400 font-semibold text-[13px] mt-1 hover:underline"
-                  >Lihat Profil</span
+                  >{{ $t("profile.viewProfile") || "Lihat Profil" }}</span
                 >
               </div>
             </NuxtLink>
@@ -140,7 +140,7 @@
               <span
                 class="text-[14px] font-medium text-gray-700 dark:text-gray-300"
               >
-                Bahasa / Language
+                {{ $t("profile.language") || "Bahasa / Language" }}
               </span>
               <div
                 class="flex gap-1 text-[12px] font-medium text-gray-500 bg-gray-100 dark:bg-gray-800 px-2 py-1.5 rounded-md"
@@ -182,7 +182,7 @@
                 <span
                   class="text-[14px] font-medium text-gray-700 dark:text-gray-300"
                 >
-                  Mode Gelap
+                  {{ $t("profile.darkMode") || "Mode Gelap" }}
                 </span>
               </div>
               <!-- Toggle switch UI -->

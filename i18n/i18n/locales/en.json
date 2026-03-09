@@ -30,6 +30,9 @@
     "btnMessage": "Send Message",
     "btnDownload": "Download CV",
     "btnProjects": "View Projects",
+    "viewProfile": "View Profile",
+    "language": "Language / Bahasa",
+    "darkMode": "Dark Mode",
     "aboutTitle": "About",
     "aboutDesc1": "Hello! I'm a passionate Frontend Developer dedicated to building responsive and user-friendly web applications. With a strong technical foundation in modern web technologies, I'm always eager to solve complex problems and craft elegant interface solutions.",
     "aboutDesc2": "Currently part of the IT Development team at AirNav Indonesia, gaining hands-on experience in a professional environment and real-world projects that demand high-level system performance and reliability. In addition to software engineering, I also focus on architecture design and continuous maintenance."
