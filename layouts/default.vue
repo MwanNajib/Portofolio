@@ -328,7 +328,7 @@
               <input
                 v-model="tempName"
                 type="text"
-                placeholder="Contoh : Gibran Rakabuming Raka"
+                placeholder="Contoh : Mohammad Ali"
                 required
                 class="w-full bg-gray-50 dark:bg-[#24292e] border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white rounded-lg px-4 py-3.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600/20 focus:border-blue-600 transition-all"
               />
