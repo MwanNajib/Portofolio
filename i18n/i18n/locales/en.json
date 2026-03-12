@@ -11,7 +11,7 @@
     "button": "Portfolio"
   },
   "home": {
-    "welcome_greeting": "Hello, {name}!💻",
+    "welcome_greeting": "Hello, {name}!",
     "welcome_message": "Welcome to my portfolio website. Here, I summarize various things about myself!",
     "pinned_title": "Pinned Introduction",
     "pinned_content": "Hello! I am Muhammad Wisnu Ainun Najib, a passionate IT professional and a recent graduate with a Bachelor of Applied Science (S.Tr.T) in Computer Engineering Technology from Politeknik Negeri Semarang. My journey in the tech industry has been driven by a strong fascination with how digital solutions can solve real-world problems...",
