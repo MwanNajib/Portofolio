@@ -286,43 +286,41 @@
       <div class="absolute inset-0 bg-slate-950/40 backdrop-blur-md"></div>
 
       <div
-        class="relative w-full max-w-md overflow-hidden rounded-xl bg-white shadow-[0_20px_50px_rgba(0,0,0,0.2)] animate-in fade-in zoom-in duration-500 dark:bg-[#1b1f23] border border-gray-100 dark:border-gray-800"
+        class="relative w-full max-w-[380px] overflow-hidden rounded-[2.5rem] bg-white/95 dark:bg-[#111827]/95 backdrop-blur-xl shadow-[0_32px_64px_-12px_rgba(0,0,0,0.4)] animate-in fade-in zoom-in duration-700 border border-white/20 dark:border-white/10"
       >
-        <div
-          class="h-1.5 w-full bg-gradient-to-r from-blue-600 to-indigo-600"
-        ></div>
-
-        <div class="p-10">
-          <div class="flex justify-center mb-8">
-            <div
-              class="w-14 h-14 border-2 border-blue-600/20 rounded-full flex items-center justify-center"
-            >
+        <div class="p-8 sm:p-10">
+          <div class="flex justify-center mb-6">
+            <div class="relative">
               <div
-                class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white shadow-lg shadow-blue-500/30"
+                class="absolute -inset-3 bg-gradient-to-tr from-blue-600 to-indigo-600 rounded-full blur-lg opacity-20 animate-pulse"
+              ></div>
+
+              <div
+                class="relative w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-700 rounded-2xl flex items-center justify-center text-white shadow-xl shadow-blue-500/30 transform -rotate-2"
               >
-                <i class="fas fa-user-tie text-lg"></i>
+                <i class="fas fa-id-card text-2xl"></i>
               </div>
             </div>
           </div>
 
-          <div class="text-center mb-10">
+          <div class="text-center mb-8">
             <h2
-              class="text-2xl font-semibold text-gray-900 dark:text-white mb-3 tracking-tight"
+              class="text-2xl font-black text-gray-900 dark:text-white mb-3 tracking-tight"
             >
               Selamat Datang
             </h2>
+            <div class="w-10 h-1 bg-blue-600 mx-auto rounded-full mb-5"></div>
             <p
-              class="text-[14px] text-gray-500 dark:text-gray-400 leading-relaxed max-w-[280px] mx-auto"
+              class="text-[14px] text-gray-500 dark:text-gray-400 leading-relaxed font-medium px-2"
             >
-              Silakan masukkan nama Anda untuk memulai pengalaman navigasi
-              portofolio yang dipersonalisasi.
+              Silakan masukkan nama Anda untuk memulai navigasi portofolio.
             </p>
           </div>
 
           <form @submit.prevent="saveGuestName" class="space-y-6">
-            <div class="relative group">
+            <div class="space-y-2.5">
               <label
-                class="block text-[11px] font-bold uppercase tracking-widest text-blue-600 mb-2 ml-1"
+                class="block text-[11px] font-bold uppercase tracking-[0.2em] text-blue-600 dark:text-blue-400 ml-1"
                 >Nama Lengkap / Panggilan</label
               >
               <input
@@ -330,25 +328,36 @@
                 type="text"
                 placeholder="Contoh : Mohammad Ali"
                 required
-                class="w-full bg-gray-50 dark:bg-[#24292e] border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white rounded-lg px-4 py-3.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600/20 focus:border-blue-600 transition-all"
+                class="w-full bg-gray-50 dark:bg-gray-800/40 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white rounded-2xl px-5 py-3.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600/30 focus:border-blue-600 transition-all placeholder:text-gray-400 dark:placeholder:text-gray-500 shadow-inner"
               />
             </div>
 
             <button
               type="submit"
-              class="w-full bg-[#0a66c2] hover:bg-[#004182] text-white text-sm font-bold py-4 rounded-lg transition-all shadow-md hover:shadow-lg flex justify-center items-center gap-3 tracking-wide"
+              class="group relative w-full overflow-hidden rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 px-6 py-4 text-sm font-bold text-white transition-all hover:scale-[1.02] active:scale-[0.98] shadow-[0_10px_25px_-5px_rgba(59,130,246,0.5)]"
             >
-              <span>MASUK KE PORTOFOLIO</span>
-              <i class="fas fa-chevron-right text-[10px] opacity-70"></i>
+              <div
+                class="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"
+              ></div>
+              <div class="relative flex justify-center items-center gap-3">
+                <span>MASUK KE PORTOFOLIO</span>
+                <i
+                  class="fas fa-arrow-right text-[11px] group-hover:translate-x-1 transition-transform"
+                ></i>
+              </div>
             </button>
           </form>
 
           <div
-            class="mt-8 pt-6 border-t border-gray-100 dark:border-gray-800 text-center"
+            class="mt-8 pt-6 border-t border-gray-100 dark:border-gray-800/50 text-center"
           >
-            <span class="text-[10px] text-gray-400 uppercase tracking-[0.2em]"
-              >Portfolio Interactive Identity</span
+            <span
+              class="text-[10px] font-bold text-gray-400 dark:text-gray-500 uppercase tracking-[0.3em] flex items-center justify-center gap-2"
             >
+              <span class="h-px w-6 bg-gray-200 dark:bg-gray-800"></span>
+              Identity System
+              <span class="h-px w-6 bg-gray-200 dark:bg-gray-800"></span>
+            </span>
           </div>
         </div>
       </div>
@@ -373,10 +382,16 @@ const guestName = useState("guestName", () => "");
 
 onMounted(() => {
   const savedName = localStorage.getItem("guest-name");
-  if (savedName) {
+  const savedTimestamp = localStorage.getItem("guest-name-timestamp");
+  const now = Date.now();
+  const ONE_DAY_MS = 24 * 60 * 60 * 1000;
+
+  if (savedName && savedTimestamp && now - parseInt(savedTimestamp) < ONE_DAY_MS) {
     guestName.value = savedName;
   } else {
-    // Beri jeda sedikit agar modal tidak langsung numpuk saat load pertama
+    // Clear storage if expired or not found
+    localStorage.removeItem("guest-name");
+    localStorage.removeItem("guest-name-timestamp");
     setTimeout(() => {
       showWelcomeModal.value = true;
     }, 500);
@@ -387,6 +402,7 @@ const saveGuestName = () => {
   if (tempName.value.trim()) {
     guestName.value = tempName.value.trim();
     localStorage.setItem("guest-name", guestName.value);
+    localStorage.setItem("guest-name-timestamp", Date.now().toString());
     showWelcomeModal.value = false;
   }
 };
