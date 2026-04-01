@@ -87,9 +87,11 @@
     "category1": "Event Management",
     "category2": "IT Support System",
     "category3": "Computer Vision",
+    "category4": "Booking System",
     "navEventDesc": "NavEvent is a smart and integrated system designed to ensure efficiency, precision, and professionalism in every event. With advanced technology and an intuitive interface, this system facilitates scheduling, participant management, and event progress monitoring.",
     "helpdeskDesc": "An enterprise-scale internal support management system built to accelerate the IT team's response time. With an intuitive interface and real-time communication integration, this system streamlines the workflow seamlessly from problem reporting to final resolution.",
     "fishfreshDesc": "A mobile application that functions as a solution for automatic and real-time classification of milkfish freshness. Utilizing Artificial Intelligence based on Computer Vision with the YOLOv8 model for high accuracy.",
+    "ebkostDesc": "ebkost is a digital boarding house booking platform designed to make it easier for tenants to find and book suitable accommodations. Equipped with an integrated payment system, real-time room availability management, and a modern interface for maximum user experience.",
     "proj1": {
       "title": "Project NavEvent",
       "desc": "Web platform for event discovery, registration and management."
@@ -101,6 +103,10 @@
     "proj3": {
       "title": "Project Translator",
       "desc": "A simple web tool for translating text between languages in real-time."
+    },
+    "proj4": {
+      "title": "Project ebkost",
+      "desc": "Digital boarding house booking platform with an integrated payment system."
     }
   },
   "contact": {

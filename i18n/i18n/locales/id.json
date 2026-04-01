@@ -87,9 +87,11 @@
     "category1": "Manajemen Acara",
     "category2": "Sistem Dukungan IT",
     "category3": "Visi Komputer",
+    "category4": "Sistem Pemesanan",
     "navEventDesc": "NavEvent adalah sistem pintar dan terintegrasi yang dirancang untuk memastikan efisiensi, ketepatan, dan profesionalisme di setiap acara. Dengan teknologi canggih dan antarmuka yang intuitif, sistem ini memudahkan penjadwalan, pengelolaan peserta, serta pemantauan progres acara.",
     "helpdeskDesc": "Sistem manajemen dukungan internal berskala enterprise yang dibangun untuk mempercepat waktu respons tim IT. Dengan antarmuka yang intuitif dan integrasi komunikasi real-time, sistem ini menyederhanakan alur kerja dari pelaporan masalah hingga penyelesaian akhir tanpa hambatan.",
     "fishfreshDesc": "Aplikasi mobile yang berfungsi sebagai solusi untuk klasifikasi kesegaran ikan bandeng secara otomatis dan real-time. Memanfaatkan kecerdasan buatan berbasis Computer Vision dengan model YOLOv8 untuk akurasi tinggi.",
+    "ebkostDesc": "ebkost adalah platform pemesanan kamar kost digital yang dirancang untuk memudahkan pencari kost dalam menemukan dan memesan hunian yang sesuai. Dilengkapi dengan sistem pembayaran terintegrasi, manajemen ketersediaan kamar secara real-time, dan antarmuka yang modern untuk pengalaman pengguna yang maksimal.",
     "proj1": {
       "title": "Proyek NavEvent",
       "desc": "Platform web untuk penemuan, pendaftaran, dan manajemen acara."
@@ -101,6 +103,10 @@
     "proj3": {
       "title": "Proyek Translator",
       "desc": "Alat web sederhana untuk menerjemahkan teks antar bahasa secara real-time."
+    },
+    "proj4": {
+      "title": "Proyek ebkost",
+      "desc": "Platform pemesanan kamar kost digital dengan sistem pembayaran terintegrasi."
     }
   },
   "contact": {

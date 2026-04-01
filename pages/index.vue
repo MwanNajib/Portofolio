@@ -317,28 +317,38 @@
           </div>
 
           <div
-            class="bg-[#f8fafd] dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-md overflow-hidden mb-4"
+            class="bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-md overflow-hidden mb-4 flex items-center justify-center p-4"
           >
-            <div class="h-48 w-full overflow-hidden">
+            <div class="h-48 w-full flex items-center justify-center overflow-hidden">
               <img
-                src="/image/portofolio1.jpg"
-                alt="NavEvent Portfolio"
-                class="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                src="/image/portofolio4.png"
+                alt="Ebokingkost Portfolio"
+                class="max-w-full max-h-full object-contain transition-transform duration-300 hover:scale-105"
               />
             </div>
             <div class="p-4">
               <h4
                 class="font-bold text-[16px] text-gray-900 dark:text-gray-100"
               >
-                NavEvent (AirNav Event)
+                Ebokingkost
               </h4>
               <p class="text-[14px] text-gray-600 dark:text-gray-400 mt-1">
-                {{ $t("home.project_post_nav_desc") }}
+                {{ $t("portfolio.ebokingkostDesc") }}
               </p>
               <div class="flex flex-wrap gap-2 mt-3">
                 <span
+                  class="bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 text-xs px-2 py-1 rounded-full flex items-center gap-1.5"
+                >
+                  <svg class="h-3 w-3 transition-colors duration-300" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="64" cy="64" r="64" fill="currentColor"/>
+                    <path d="M102.4 97.4667L45.4187 25.6H38.4V102.4H45.4187V43.52L95.3813 102.4H102.4V97.4667Z" fill="white" />
+                    <path d="M76.8 102.4V25.6H83.8187V102.4H76.8Z" fill="white"/>
+                  </svg>
+                  Next.js
+                </span>
+                <span
                   class="bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 text-xs px-2 py-1 rounded-full"
-                  >React.js</span
+                  >Prisma</span
                 >
               </div>
             </div>

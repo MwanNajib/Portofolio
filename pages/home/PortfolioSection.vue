@@ -8,16 +8,43 @@
         {{ $t("portfolio.title") }}
       </h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-        <!-- Project Card 1 -->
+        <!-- Project Card 1: ebkost -->
         <div
           class="project-card bg-white rounded-lg shadow-lg overflow-hidden"
           data-aos="fade-up"
           data-aos-delay="100"
         >
           <img
+            src="/image/portofolio4.png"
+            alt="Project ebkost"
+            class="w-full h-56 object-contain bg-gray-50"
+          />
+          <div class="p-6">
+            <h3 class="text-2xl font-bold mb-2 text-gray-800">
+              {{ $t("portfolio.proj4.title") }}
+            </h3>
+            <p class="text-gray-600 mb-4">
+              {{ $t("portfolio.proj4.desc") }}
+            </p>
+            <a
+              href="https://github.com/MwanNajib/ebkost"
+              target="_blank"
+              class="text-red-600 font-semibold hover:underline"
+              >{{ $t("portfolio.detail") }}</a
+            >
+          </div>
+        </div>
+
+        <!-- Project Card 2: NavEvent -->
+        <div
+          class="project-card bg-white rounded-lg shadow-lg overflow-hidden"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          <img
             src="/image/portofolio1.jpg"
             alt="Project NavEvent"
-            class="w-full h-56 object-cover"
+            class="w-full h-56 object-contain bg-gray-50"
           />
           <div class="p-6">
             <h3 class="text-2xl font-bold mb-2 text-gray-800">
@@ -35,16 +62,16 @@
           </div>
         </div>
 
-        <!-- Project Card 2 -->
+        <!-- Project Card 3: HelpDesk AirNav -->
         <div
           class="project-card bg-white rounded-lg shadow-lg overflow-hidden"
           data-aos="fade-up"
-          data-aos-delay="200"
+          data-aos-delay="300"
         >
           <img
             src="/image/portofolio2.png"
-            alt="Project Website Makroni Kapok-Kapok"
-            class="w-full h-56 object-cover"
+            alt="Project HelpDesk AirNav"
+            class="w-full h-56 object-contain bg-gray-50"
           />
           <div class="p-6">
             <h3 class="text-2xl font-bold mb-2 text-gray-800">
@@ -62,16 +89,16 @@
           </div>
         </div>
 
-        <!-- Project Card 3 -->
+        <!-- Project Card 4: FISHFRESH -->
         <div
           class="project-card bg-white rounded-lg shadow-lg overflow-hidden"
           data-aos="fade-up"
-          data-aos-delay="300"
+          data-aos-delay="400"
         >
           <img
             src="/image/portofolio3.jpg"
-            alt="Project Translator"
-            class="w-full h-56 object-cover"
+            alt="Project FISHFRESH"
+            class="w-full h-56 object-contain bg-gray-50"
           />
           <div class="p-6">
             <h3 class="text-2xl font-bold mb-2 text-gray-800">
@@ -81,7 +108,7 @@
               {{ $t("portfolio.proj3.desc") }}
             </p>
             <a
-              href="https://github.com/MwanNajib"
+              href="https://github.com/MwanNajib/Fish-Fresh"
               target="_blank"
               class="text-red-600 font-semibold hover:underline"
               >{{ $t("portfolio.detail") }}</a
