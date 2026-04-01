@@ -38,9 +38,6 @@
                 <div
                   class="h-8 w-28 bg-gray-200 dark:bg-gray-700 rounded-full"
                 ></div>
-                <div
-                  class="h-8 w-32 bg-gray-200 dark:bg-gray-700 rounded-full"
-                ></div>
               </div>
             </div>
 
@@ -131,20 +128,13 @@
                   {{ $t("profile.btnMessage") }}
                 </a>
                 <a
-                  href="https://drive.google.com/file/d/1LfeM3STc-Zqr2ZTl7BXZt1eUO3QUyb-t/view?usp=drive_link"
+                  href="https://drive.google.com/file/d/1S8T8osXDO2gBuP_JmylE0KnrhHzOUJdn/view?usp=drive_link"
                   target="_blank"
                   class="flex items-center gap-2 bg-transparent text-[#0a66c2] dark:text-blue-400 font-semibold text-[15px] px-5 py-1.5 rounded-full hover:bg-blue-50 dark:hover:bg-blue-900/20 transition border-[1.5px] border-[#0a66c2] dark:border-blue-400 shadow-sm"
                 >
                   <i class="fas fa-file-download text-[13px]"></i>
                   {{ $t("profile.btnDownload") }}
                 </a>
-                <NuxtLink
-                  :to="localePath('/portfolio')"
-                  class="flex items-center gap-2 bg-transparent text-gray-600 dark:text-gray-300 font-semibold text-[15px] px-5 py-1.5 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition border-[1.5px] border-gray-500 dark:border-gray-400 shadow-sm"
-                >
-                  <i class="fas fa-folder-open text-[13px]"></i>
-                  {{ $t("profile.btnProjects") }}
-                </NuxtLink>
               </div>
             </div>
 
